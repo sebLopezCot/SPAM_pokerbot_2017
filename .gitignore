@@ -1,3 +1,6 @@
+# game log files
+engine/*/P1_P2*.txt
+
 # Prerequisites
 *.d
 
