@@ -1,5 +1,6 @@
 # game log files
 engine/P1_P2*.txt
+engine/sqlite.db
 
 .metadata
 bin/

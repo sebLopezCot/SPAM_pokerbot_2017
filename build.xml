@@ -1,0 +1,28 @@
+<project>
+
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="bin/classes"/>
+        <javac srcdir="src" destdir="bin/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="bin/jar"/>
+        <jar destfile="pokerbot.jar" basedir="bin/classes">
+            <manifest>
+                <attribute name="Main-Class" value="pokerbots.player.Main"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="pokerbot.jar" fork="true">
+        	<!-- Port # -->
+        	<arg line="3000"/>
+        </java>
+    </target>
+
+</project>
