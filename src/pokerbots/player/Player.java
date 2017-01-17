@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import pokerbots.spam_framework.Game;
+import pokerbots.spam_framework.packet.Packet;
+import pokerbots.spam_framework.packet.PacketParser;
+
 /**
  * Simple example pokerbot, written in Java.
  * 
@@ -17,6 +21,8 @@ public class Player {
 	
 	private final PrintWriter outStream;
 	private final BufferedReader inStream;
+	
+	private static final boolean USE_SAMPLE_BOT = true;
 
 	public Player(PrintWriter output, BufferedReader input) {
 		this.outStream = output;
@@ -26,6 +32,10 @@ public class Player {
 	public void run() {
 		String input;
 		try {
+			// Start a new game engine
+			Game game = new Game();
+			PacketParser parser = new PacketParser();
+			
 			// Block until engine sends us a packet; read it into input.
 			while ((input = inStream.readLine()) != null) {
 
@@ -33,18 +43,24 @@ public class Player {
 				// from the engine and act on it.
 				System.out.println(input);
 				
-				String word = input.split(" ")[0];
-				if ("GETACTION".compareToIgnoreCase(word) == 0) {
-					// When appropriate, reply to the engine with a legal
-					// action.
-					// The engine will ignore all spurious packets you send.
-					// The engine will also check/fold for you if you return an
-					// illegal action.
-					outStream.println("CHECK");
-				} else if ("REQUESTKEYVALUES".compareToIgnoreCase(word) == 0) {
-					// At the end, engine will allow bot to send key/value pairs to store.
-					// FINISH indicates no more to store.
-					outStream.println("FINISH");
+				if(USE_SAMPLE_BOT){
+					String word = input.split(" ")[0];
+					if ("GETACTION".compareToIgnoreCase(word) == 0) {
+						// When appropriate, reply to the engine with a legal
+						// action.
+						// The engine will ignore all spurious packets you send.
+						// The engine will also check/fold for you if you return an
+						// illegal action.
+						outStream.println("CHECK");
+					} else if ("REQUESTKEYVALUES".compareToIgnoreCase(word) == 0) {
+						// At the end, engine will allow bot to send key/value pairs to store.
+						// FINISH indicates no more to store.
+						outStream.println("FINISH");
+					}
+				} else {
+					// Use the SPAM bot
+					Packet packet = parser.parse(input);
+					packet.updateGame(game);
 				}
 			}
 		} catch (IOException e) {
