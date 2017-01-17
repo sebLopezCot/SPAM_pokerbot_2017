@@ -1,1 +1,1 @@
-./player "$@"
+java -jar pokerbot.jar "$@"
