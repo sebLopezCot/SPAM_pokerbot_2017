@@ -1,39 +1,53 @@
 # game log files
-engine/*/P1_P2*.txt
+engine/P1_P2*.txt
 
-# Prerequisites
-*.d
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Eclipse Core
+.project
 
-# Precompiled Headers
-*.gch
-*.pch
+# External tool builders
+.externalToolBuilders/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Locally stored "Eclipse launch configurations"
+*.launch
 
-# Fortran module files
-*.mod
-*.smod
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# CDT-specific (C/C++ Development Tooling)
+.cproject
 
-# Executables
-*.exe
-*.out
-*.app
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
 
-# scons
-.sconsign.dblite
+# Java annotation processor (APT)
+.factorypath
 
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
