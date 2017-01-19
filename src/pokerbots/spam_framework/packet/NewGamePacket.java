@@ -19,8 +19,8 @@ public class NewGamePacket extends Packet {
 	@Override
 	public void updateGameState(GameState gameState) {
 		gameState.setNumStartingChips(stackSize);
-		gameState.setNumMyChips(stackSize);
-		gameState.setNumVillianChips(stackSize);
+		gameState.setMyStackSize(stackSize);
+		gameState.setVillainStackSize(stackSize);
 		gameState.setBigBlindAmount(bigBlind);
 		gameState.setNumHandsLeft(numHands);
 		gameState.setHandDuration(timeBank);

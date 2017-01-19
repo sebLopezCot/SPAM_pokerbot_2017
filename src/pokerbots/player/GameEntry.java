@@ -52,6 +52,7 @@ public class GameEntry {
 				Packet packet = parser.parse(input);
 				packet.updateGameState(gameState);
 				if(packet instanceof GetActionPacket || packet instanceof RequestKeyValuesPacket){
+					
 					String action = basicStrat.getAction(gameState);
 					
 					if (DEBUG) {

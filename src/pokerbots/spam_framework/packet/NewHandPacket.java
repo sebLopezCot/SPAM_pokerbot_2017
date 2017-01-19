@@ -31,8 +31,8 @@ public class NewHandPacket extends Packet {
 		gameState.setDealer(isDealer);
 		gameState.setCard1(card1);
 		gameState.setCard2(card2);
-		gameState.setNumMyChips(gameState.getNumStartingChips() + myBank);
-		gameState.setNumVillianChips(gameState.getNumStartingChips() + villainBank);
+		gameState.setMyStackSize(gameState.getNumStartingChips() + myBank);
+		gameState.setVillainStackSize(gameState.getNumStartingChips() + villainBank);
 		gameState.setTimeLeft(timeBank);
 		gameState.setCurrentStreet(GameState.PREFLOP);
 	}

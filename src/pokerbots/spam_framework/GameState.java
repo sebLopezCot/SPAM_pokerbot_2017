@@ -1,5 +1,7 @@
 package pokerbots.spam_framework;
 
+import java.util.ArrayList;
+
 public class GameState {
 	
 	// Street enum values
@@ -8,12 +10,16 @@ public class GameState {
 	public static final int FLOP = 2;
 	public static final int TURN = 3;
 	public static final int RIVER = 4;
-	public static final int GAMEOVER = 5;
+	public static final int HANDOVER = 5;
+	public static final int GAMEOVER = 6;
 	
 	// Attributes
+	private int potSize;					// number of chips in the pot
+	private ArrayList<Card> boardCards; 	// cards on the table
+	private ArrayList<String> legalActions; // legal actions for this street
 	private int numStartingChips;	// number of chips
-	private int numMyChips;			// number of chips left in player's stack
-	private int numVillianChips;	// number of chips left in other player's stack
+	private int myStackSize;			// number of chips left in player's stack
+	private int villainStackSize;	// number of chips left in other player's stack
 	private int bigBlindAmount; 	// number of chips for a big blind
 	private int numHandsLeft;		// number of hands left
 	private int currentHandID; 		// ID of the current hand
@@ -26,24 +32,27 @@ public class GameState {
 	private PlayerHistory selfHistory;	  // stats on our moves
 	private PlayerHistory villainHistory; // stats on previous villain moves
 	
-	
+	public GameState() {
+		selfHistory = new PlayerHistory();
+		villainHistory = new PlayerHistory();
+	}
 	
 	// ----- GETTERS AND SETTERS --------------------------------------------
 	
-	public int getNumMyChips() {
-		return numMyChips;
+	public int getMyStackSize() {
+		return myStackSize;
 	}
 
-	public void setNumMyChips(int numMyChips) {
-		this.numMyChips = numMyChips;
+	public void setMyStackSize(int numMyChips) {
+		this.myStackSize = numMyChips;
 	}
 
-	public int getNumVillianChips() {
-		return numVillianChips;
+	public int getVillainStackSize() {
+		return villainStackSize;
 	}
 
-	public void setNumVillianChips(int numVillianChips) {
-		this.numVillianChips = numVillianChips;
+	public void setVillainStackSize(int numVillianChips) {
+		this.villainStackSize = numVillianChips;
 	}
 
 	public int getBigBlindAmount() {
@@ -140,6 +149,30 @@ public class GameState {
 
 	public void setCurrentStreet(int currentStreet) {
 		this.currentStreet = currentStreet;
+	}
+
+	public int getPotSize() {
+		return potSize;
+	}
+
+	public void setPotSize(int potSize) {
+		this.potSize = potSize;
+	}
+
+	public ArrayList<String> getLegalActions() {
+		return legalActions;
+	}
+
+	public void setLegalActions(ArrayList<String> legalActions) {
+		this.legalActions = legalActions;
+	}
+
+	public ArrayList<Card> getBoardCards() {
+		return boardCards;
+	}
+
+	public void setBoardCards(ArrayList<Card> boardCards) {
+		this.boardCards = boardCards;
 	}
 	
 	
