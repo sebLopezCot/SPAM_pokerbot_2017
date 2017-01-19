@@ -43,19 +43,12 @@ public class PacketParser {
 				// TODO: Implement handover packet
 				
 				return new HandOverPacket();
-				
-			case "REQUESTKEYVALUES":
-				int bytesLeft = Integer.parseInt(data[1]);
-				
-				return new RequestKeyValuesPacket(bytesLeft);
-				
-			case "KEYVALUE":
-				String key = data[1];
-				String value = data[2];
-				
-				return new KeyValuePacket(key, value);
-			}
 			
+			case "REQUESTKEYVALUES":
+				return new RequestKeyValuesPacket();
+			
+			}
+				
 		} else {
 			System.out.println("ERROR: EMPTY PACKET WAS SENT TO SPAMBOT.");
 		}

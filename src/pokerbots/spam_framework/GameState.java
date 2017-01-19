@@ -1,7 +1,16 @@
 package pokerbots.spam_framework;
 
-public class Game {
+public class GameState {
 	
+	// Street enum values
+	public static final int PREGAME = 0;
+	public static final int PREFLOP = 1;
+	public static final int FLOP = 2;
+	public static final int TURN = 3;
+	public static final int RIVER = 4;
+	public static final int GAMEOVER = 5;
+	
+	// Attributes
 	private int numStartingChips;	// number of chips
 	private int numMyChips;			// number of chips left in player's stack
 	private int numVillianChips;	// number of chips left in other player's stack
@@ -12,14 +21,12 @@ public class Game {
 	private double timeLeft;		// time left before match ends
 	private boolean isDealer; 		// whether or not we are the dealer
 	private Card card1, card2;		// the two cards the player has
+	private int currentStreet;		// the current street of the game
 
-	public void broadcastKeyValuePair(String key, String value){
-		
-	}
+	private PlayerHistory selfHistory;	  // stats on our moves
+	private PlayerHistory villainHistory; // stats on previous villain moves
 	
-	public void requestKeyValuePairsToBeStored(int bytesLeft){
-		
-	}
+	
 	
 	// ----- GETTERS AND SETTERS --------------------------------------------
 	
@@ -109,6 +116,30 @@ public class Game {
 
 	public void setTimeLeft(double timeLeft) {
 		this.timeLeft = timeLeft;
+	}
+
+	public PlayerHistory getVillainHistory() {
+		return villainHistory;
+	}
+
+	public void setVillainHistory(PlayerHistory villainHistory) {
+		this.villainHistory = villainHistory;
+	}
+
+	public PlayerHistory getSelfHistory() {
+		return selfHistory;
+	}
+
+	public void setSelfHistory(PlayerHistory selfHistory) {
+		this.selfHistory = selfHistory;
+	}
+
+	public int getCurrentStreet() {
+		return currentStreet;
+	}
+
+	public void setCurrentStreet(int currentStreet) {
+		this.currentStreet = currentStreet;
 	}
 	
 	

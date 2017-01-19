@@ -63,8 +63,8 @@ public class Main {
 			BufferedReader inStream = new BufferedReader(new InputStreamReader(
 					socket.getInputStream()));
 			
-			Player player = new Player(outStream, inStream);
-			player.run();
+			GameEntry gameEntry = new GameEntry(outStream, inStream);
+			gameEntry.run();
 			
 			socket.close();
 		} catch (IOException e) {

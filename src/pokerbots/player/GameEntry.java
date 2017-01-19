@@ -4,9 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import pokerbots.spam_framework.Game;
+import pokerbots.spam_framework.GameState;
+import pokerbots.spam_framework.packet.GetActionPacket;
+import pokerbots.spam_framework.packet.HandOverPacket;
 import pokerbots.spam_framework.packet.Packet;
 import pokerbots.spam_framework.packet.PacketParser;
+import pokerbots.spam_framework.packet.RequestKeyValuesPacket;
+import pokerbots.spam_framework.strategy.BasicStrategy;
 
 /**
  * Simple example pokerbot, written in Java.
@@ -17,14 +21,14 @@ import pokerbots.spam_framework.packet.PacketParser;
  * engine.
  * 
  */
-public class Player {
+public class GameEntry {
+	
+	private boolean DEBUG = true;
 	
 	private final PrintWriter outStream;
 	private final BufferedReader inStream;
 	
-	private static final boolean USE_SAMPLE_BOT = true;
-
-	public Player(PrintWriter output, BufferedReader input) {
+	public GameEntry(PrintWriter output, BufferedReader input) {
 		this.outStream = output;
 		this.inStream = input;
 	}
@@ -33,8 +37,9 @@ public class Player {
 		String input;
 		try {
 			// Start a new game engine
-			Game game = new Game();
+			GameState gameState = new GameState();
 			PacketParser parser = new PacketParser();
+			BasicStrategy basicStrat = new BasicStrategy();
 			
 			// Block until engine sends us a packet; read it into input.
 			while ((input = inStream.readLine()) != null) {
@@ -42,26 +47,24 @@ public class Player {
 				// Here is where you should implement code to parse the packets
 				// from the engine and act on it.
 				System.out.println(input);
-				
-				if(USE_SAMPLE_BOT){
-					String word = input.split(" ")[0];
-					if ("GETACTION".compareToIgnoreCase(word) == 0) {
-						// When appropriate, reply to the engine with a legal
-						// action.
-						// The engine will ignore all spurious packets you send.
-						// The engine will also check/fold for you if you return an
-						// illegal action.
-						outStream.println("CHECK");
-					} else if ("REQUESTKEYVALUES".compareToIgnoreCase(word) == 0) {
-						// At the end, engine will allow bot to send key/value pairs to store.
-						// FINISH indicates no more to store.
-						outStream.println("FINISH");
+
+				// Parse the packet, update the gamestate, and perform an action
+				Packet packet = parser.parse(input);
+				packet.updateGameState(gameState);
+				if(packet instanceof GetActionPacket || packet instanceof RequestKeyValuesPacket){
+					String action = basicStrat.getAction(gameState);
+					
+					if (DEBUG) {
+						System.out.println("MY ACTION: " + action);
 					}
-				} else {
-					// Use the SPAM bot
-					Packet packet = parser.parse(input);
-					packet.updateGame(game);
+					
+					outStream.println(action);
+					
+				} else if (packet instanceof HandOverPacket){
+					System.out.println("----------------------------------------------------------------------------");
 				}
+				
+				System.out.println(" ");
 			}
 		} catch (IOException e) {
 			System.out.println("IOException: " + e.getMessage());

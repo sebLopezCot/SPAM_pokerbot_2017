@@ -1,6 +1,6 @@
 package pokerbots.spam_framework.packet;
 
-import pokerbots.spam_framework.Game;
+import pokerbots.spam_framework.GameState;
 
 public class NewGamePacket extends Packet {
 	
@@ -17,16 +17,14 @@ public class NewGamePacket extends Packet {
 	}
 
 	@Override
-	public String updateGame(Game game) {
-		game.setNumStartingChips(stackSize);
-		game.setNumMyChips(stackSize);
-		game.setNumVillianChips(stackSize);
-		game.setBigBlindAmount(bigBlind);
-		game.setNumHandsLeft(numHands);
-		game.setHandDuration(timeBank);
-		
-		// No action string to return
-		return null;
+	public void updateGameState(GameState gameState) {
+		gameState.setNumStartingChips(stackSize);
+		gameState.setNumMyChips(stackSize);
+		gameState.setNumVillianChips(stackSize);
+		gameState.setBigBlindAmount(bigBlind);
+		gameState.setNumHandsLeft(numHands);
+		gameState.setHandDuration(timeBank);
+		gameState.setCurrentStreet(GameState.PREGAME);
 	}
 	
 }
