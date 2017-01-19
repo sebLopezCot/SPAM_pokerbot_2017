@@ -1,4 +1,4 @@
-<project>
+<project default="all">
 
     <target name="clean">
         <delete dir="bin"/>
@@ -24,5 +24,8 @@
         	<arg line="3000"/>
         </java>
     </target>
+	
+	<target name="all" depends="clean, compile, jar, run">
+	</target>
 
 </project>
