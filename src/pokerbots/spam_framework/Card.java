@@ -48,4 +48,10 @@ public class Card {
 	public String toString(){
 		return this.id;
 	}
+	
+	// Return a number between 0 and 51 as a string
+	public String toNumericString(){
+		// TODO: NEED TO FIX THIS FUNCTION
+		return this.id;
+	}
 }
