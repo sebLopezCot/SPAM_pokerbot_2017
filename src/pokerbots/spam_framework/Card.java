@@ -13,6 +13,8 @@ public class Card {
 		String[] values = { "2", "3", "4", "5", "6", "7", 
 				"8", "9", "T", "J", "Q", "K", "A" };
 		
+		cardIds = new HashSet<String>();
+		
 		for (int i = 0; i < values.length; i++){
 			for (int j = 0; j < suits.length; j++){
 				cardIds.add(values[i] + suits[j]);
