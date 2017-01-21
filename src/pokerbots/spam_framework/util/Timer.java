@@ -8,7 +8,7 @@ public class Timer {
 		lastTime = System.nanoTime();
 	}
 	
-	public long getElapsedTime() {
-		return System.nanoTime() - lastTime;
+	public double getElapsedTime() {
+		return (System.nanoTime() - lastTime) * 1e-9;
 	}
 }
