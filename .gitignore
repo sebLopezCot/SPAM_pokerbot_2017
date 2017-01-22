@@ -3,7 +3,7 @@ P1_P2*.txt
 sqlite.db
 
 # ranking tables
-ranking_tables/river_rankings*
+ranking_tables/*
 
 .metadata
 bin/
