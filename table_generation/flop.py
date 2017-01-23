@@ -59,11 +59,11 @@ for a in range(50):
 							sorted_board = sorted((new_cards[2],new_cards[3],new_cards[4],new_cards[5]))
 							sorted_hand = sorted((new_cards[0], new_cards[1]))
 							hand_value_inner += possible_turn_discard_hands[(sorted_board[0],sorted_board[1],sorted_board[2],sorted_board[3])][(sorted_hand[0], sorted_hand[1])]
-						possible_hands[(card1,card2)] = hand_value_inner/47
+						possible_hands[(card1,card2)] = hand_value_inner
 				average= sum(possible_hands.values())/(len(possible_hands))
 				for hand in possible_hands:
 					if(possible_hands[hand] > 0):
-							possible_hands[hand] = (possible_hands[hand]*1080)/average
+							possible_hands[hand] = (possible_hands[hand]*540)/average
 				f = open("Flop/"+str(a)+","+str(b)+","+str(c), "w")
 				for hand in possible_hands:
 					f.write(str(hand[0])+","+str(hand[1])+ " "+str(possible_hands[hand])+"\n")
