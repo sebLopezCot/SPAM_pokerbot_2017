@@ -22,7 +22,8 @@ public abstract class HandRanker {
 	private int parseRanking(String handString, String boardCardString) 
 			throws FileNotFoundException, IOException {
 		
-		FileReader fr = new FileReader(tableLocation + boardCardString);
+		String fileLocation = (numBoardCards > 0) ? boardCardString : RankingTableConfig.PREFLOP_FILE;
+		FileReader fr = new FileReader(tableLocation + fileLocation);
 		BufferedReader br = new BufferedReader(fr);
 
 		int rank = -1;
@@ -114,13 +115,13 @@ public abstract class HandRanker {
 		for (int i=0; i<newHandCards.size(); i++){
 			newHandString += newHandCards.get(i).toString() + ",";
 		}
-		newHandString.substring(0, newHandCards.size()-1);
+		if (numHand > 0) newHandString.substring(0, newHandCards.size()-1);
 
 		String newBoardCardString = "";
 		for (int i=0; i<newBoardCards.size(); i++){
 			newBoardCardString += newBoardCards.get(i).toString() + ",";
 		}
-		newBoardCardString.substring(0, newBoardCards.size()-1);
+		if(numBoardCards > 0) newBoardCardString.substring(0, newBoardCards.size()-1);
 		
 		return new String[] { newHandString, newBoardCardString } ;
 		
