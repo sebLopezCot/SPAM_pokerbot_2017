@@ -1,43 +1,45 @@
 package pokerbots.spam_framework;
 
-import java.util.HashSet;
+import java.util.HashMap;
 
 public class Card {
 
-	private static HashSet<String> cardIds;
+	private static HashMap<String, Integer> cardIdToNumber;
 	
 	private String id;
+	private int number;
 	
 	private static void init(){
-		String[] suits = { "c", "s", "d", "h" };
+		String[] suits = { "h", "s", "c", "d" };
 		String[] values = { "2", "3", "4", "5", "6", "7", 
 				"8", "9", "T", "J", "Q", "K", "A" };
 		
-		cardIds = new HashSet<String>();
+		cardIdToNumber = new HashMap<String, Integer>();
+		
 		
 		for (int i = 0; i < values.length; i++){
 			for (int j = 0; j < suits.length; j++){
-				cardIds.add(values[i] + suits[j]);
+				cardIdToNumber.put(values[i] + suits[j], i*4 + j);
 			}
 		}
 		
 	}
 	
 	public static boolean isCard(String cardId) {
-		if (cardIds == null) {
+		if (cardIdToNumber == null) {
 			init();
 		}
 		
-		return cardIds.contains(cardId);
+		return cardIdToNumber.containsKey(cardId);
 	}
 	
 	public Card(String id){
-		if (cardIds == null){
+		if (cardIdToNumber == null){
 			init();
 		}
 		
 		try {
-			if (cardIds.contains(id)) {
+			if (cardIdToNumber.containsKey(id)) {
 				this.id = id;
 			} else {
 				throw new Exception("Specified card ID is not valid");
@@ -52,8 +54,11 @@ public class Card {
 	}
 	
 	// Return a number between 0 and 51 as a string
-	public String toNumericString(){
-		// TODO: NEED TO FIX THIS FUNCTION
-		return this.id;
+	public int toNumber() {
+		if(cardIdToNumber == null) {
+			init();
+		}
+		
+		return cardIdToNumber.get(this.id);
 	}
 }
