@@ -1,13 +1,13 @@
 package pokerbots.spam_framework;
 
 import java.util.HashMap;
+import java.util.Set;
 
 public class Card {
 
 	private static HashMap<String, Integer> cardIdToNumber;
 	
 	private String id;
-	private int number;
 	
 	private static void init(){
 		String[] suits = { "h", "s", "c", "d" };
@@ -23,6 +23,14 @@ public class Card {
 			}
 		}
 		
+	}
+	
+	public static Set<String> getCardSet() {
+		if (cardIdToNumber == null) {
+			init();
+		}
+		
+		return cardIdToNumber.keySet();
 	}
 	
 	public static boolean isCard(String cardId) {

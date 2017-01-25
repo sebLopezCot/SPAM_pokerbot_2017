@@ -113,21 +113,25 @@ public abstract class HandRanker {
 		// Convert to string arrays
 		String newHandString = "";
 		for (int i=0; i<newHandCards.size(); i++){
-			newHandString += newHandCards.get(i).toString() + ",";
+			newHandString += newHandCards.get(i).toString();
+			if (i < newHandCards.size()-1) {
+				newHandString += ",";
+			}
 		}
-		if (numHand > 0) newHandString.substring(0, newHandCards.size()-1);
 
 		String newBoardCardString = "";
 		for (int i=0; i<newBoardCards.size(); i++){
-			newBoardCardString += newBoardCards.get(i).toString() + ",";
+			newBoardCardString += newBoardCards.get(i).toString();
+			if (i < newBoardCards.size()-1) {
+				newBoardCardString += ",";
+			}
 		}
-		if(numBoardCards > 0) newBoardCardString.substring(0, newBoardCards.size()-1);
 		
 		return new String[] { newHandString, newBoardCardString } ;
 		
 	}
 	
-	public int getRanking(Card[] hand, Card[] boardCards) {
+	public int getValue(Card[] hand, Card[] boardCards) {
 		int rank = -1;
 		
 		try {
