@@ -10,7 +10,7 @@ import pokerbots.spam_framework.packet.HandOverPacket;
 import pokerbots.spam_framework.packet.Packet;
 import pokerbots.spam_framework.packet.PacketParser;
 import pokerbots.spam_framework.packet.RequestKeyValuesPacket;
-import pokerbots.spam_framework.strategy.BasicStrategy;
+import pokerbots.spam_framework.strategy.CheckFoldStrategy;
 
 /**
  * Simple example pokerbot, written in Java.
@@ -39,7 +39,7 @@ public class GameEntry {
 			// Start a new game engine
 			GameState gameState = new GameState();
 			PacketParser parser = new PacketParser();
-			BasicStrategy basicStrat = new BasicStrategy();
+			CheckFoldStrategy basicStrat = new CheckFoldStrategy();
 			
 			// Block until engine sends us a packet; read it into input.
 			while ((input = inStream.readLine()) != null) {
