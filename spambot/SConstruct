@@ -1,9 +1,18 @@
 import os
+import fnmatch
+
+matches = []
+for root, dirnames, filenames in os.walk('.'):
+    for filename in fnmatch.filter(filenames, '*.cpp'):
+        matches.append(os.path.join(root, filename))
+
+#print matches
+
 # On Windows, the path is incorrect, so change the path to
 # the environment one. Even though windows is the problem,
 # do it for all platforms
 newpath=os.environ.get('PATH')
-env = Environment(ENV = { 'PATH' : newpath })
+env = Environment(ENV = { 'PATH' : newpath, 'CPPPATH' : 'SPAMFramework' })
 
-boost_libs = ['boost_program_options', 'boost_system']
-env.Program('player', ['main.cpp', 'player.cpp'], LIBS=[boost_libs, 'pthread'])
+boost_libs = ['boost_program_options', 'boost_system', 'boost_chrono']
+env.Program('player', matches, LIBS=[boost_libs, 'pthread'])

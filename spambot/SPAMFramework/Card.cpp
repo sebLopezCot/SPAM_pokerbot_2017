@@ -1,7 +1,9 @@
 #include "Card.h"
 
+std::map<std::string, int> Card::card_id_to_number;
+
 Card::Card(std::string id) {
-	if (card_id_to_number == NULL) {
+	if (card_id_to_number.size() == 0) {
 		Init();
 	}
 
@@ -19,21 +21,21 @@ Card::Card(std::string id) {
 }
 
 void Card::Init() {
-	std::string[] suits = { "h", "s", "c", "d" };
-	std::string[] values = { "2", "3", "4", "5", "6", "7", 
+	std::string suits[] = { "h", "s", "c", "d" };
+	std::string values[] = { "2", "3", "4", "5", "6", "7", 
 				"8", "9", "T", "J", "Q", "K", "A" };
 
-	int num_suits = sizeof(suits) / sizeof(suits[0])
-	int num_values = sizeof(values) / sizeof(values[0])
+	int num_suits = sizeof(suits) / sizeof(suits[0]);
+	int num_values = sizeof(values) / sizeof(values[0]);
 	for (int i=0; i < num_values; i++) {
 		for (int j=0; j < num_suits; j++) {
-			card_id_to_number[values[i]+suits[j]] = i*4 + j;
+			card_id_to_number.insert(std::pair<std::string, int>(values[i]+suits[j], i*4 + j));
 		}
 	}
 }
 
 std::vector<std::string> Card::GetCardList() {
-	if (card_id_to_number == NULL) {
+	if (card_id_to_number.size() == 0) {
 		Init();
 	}
 
@@ -46,11 +48,11 @@ std::vector<std::string> Card::GetCardList() {
 }
 
 bool Card::IsCard(std::string card_id) {
-	if (card_id_to_number == NULL) {
+	if (card_id_to_number.size() == 0) {
 		Init();
 	}
 
-	return (card_id_to_number.count(id) > 0);
+	return (card_id_to_number.count(card_id) > 0);
 }
 
 std::string Card::ToString() {
@@ -58,7 +60,7 @@ std::string Card::ToString() {
 }
 
 int Card::ToNumber() {
-	if (card_id_to_number == NULL) {
+	if (card_id_to_number.size() == 0) {
 		Init();
 	}
 

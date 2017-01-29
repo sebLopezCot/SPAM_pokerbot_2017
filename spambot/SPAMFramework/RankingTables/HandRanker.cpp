@@ -1,6 +1,7 @@
 #include "HandRanker.h"
 
 HandRanker::HandRanker(int num_board_cards, std::string table_location) {
+	m_num_hand_cards = 2;
 	m_num_board_cards = num_board_cards;
 	m_table_location = table_location;
 }
@@ -52,7 +53,7 @@ std::vector<std::string> HandRanker::MapToCompressionScheme(std::vector<int> han
 	std::vector<int> board_cards_as_numbers) {
 
 	// Suit array
-	std::vector<std::vector<int>> num_of_each_suit(4);
+	std::vector<std::vector<int> > num_of_each_suit(4);
 
 	// init suit array
 	for (int i=0; i < 4; i++) {
@@ -69,7 +70,7 @@ std::vector<std::string> HandRanker::MapToCompressionScheme(std::vector<int> han
 	}
 
 	// Sort based on frequency
-	std::sort(num_of_each_suit.begin(), num_of_each_suit.end(), Compare);
+	std::sort(num_of_each_suit.begin(), num_of_each_suit.end(), HandRanker::Compare);
 	std::reverse(num_of_each_suit.begin(), num_of_each_suit.end());
 
 	// Transforming old suits into new ones
@@ -112,7 +113,7 @@ std::vector<std::string> HandRanker::MapToCompressionScheme(std::vector<int> han
 	// Convert to string array
 	std::string new_hand_string = "";
 	for (int i=0; i < 2; i++) {
-		new_hand_string += std::to_string(new_hand_cards[i]);
+		new_hand_string += SPAMHelper::to_string(new_hand_cards[i]);
 		if (i < new_hand_cards.size()-1) {
 			new_hand_string += ",";
 		}
@@ -120,7 +121,7 @@ std::vector<std::string> HandRanker::MapToCompressionScheme(std::vector<int> han
 
 	std::string new_board_card_string = "";
 	for (int i=0; i < new_board_cards.size(); i++) {
-		new_board_card_string += std::to_string(new_board_cards[i]);
+		new_board_card_string += SPAMHelper::to_string(new_board_cards[i]);
 		if (i < new_board_cards.size()-1) {
 			new_board_card_string += ",";
 		}
@@ -143,7 +144,8 @@ int HandRanker::ParseRanking(std::string hand_string, std::string board_card_str
 		(m_num_board_cards > 0) ? board_card_string : RankingTableConfig::PREFLOP_FILE;
 
 	// Load the file and read it until we get to the thing we want
-	std::ifstream file(m_table_location + file_location);
+	std::string fname = m_table_location + file_location;
+	std::ifstream file(fname.c_str());
 	std::string line;
 	int rank = -1;
 	while (std::getline(file, line) && rank == -1) {
@@ -153,7 +155,8 @@ int HandRanker::ParseRanking(std::string hand_string, std::string board_card_str
 			// Split the string and parse the ranking value
 			pos = line.find(" ");
 			std::string value = line.substr(pos+1);
-			rank = std::stoi(value);
+			int rank;
+			std::istringstream(value) >> rank;
 		}
 	}
 

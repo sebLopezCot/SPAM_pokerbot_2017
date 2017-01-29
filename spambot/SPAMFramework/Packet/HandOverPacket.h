@@ -11,15 +11,16 @@
 class HandOverPacket : public Packet
 {
 public:
-	HandOverPacket(int myStackSize, int villainStackSize,
-			int numBoardCards, std::vector<Card*> boardCards, int numLastActions,
-			std::vector<std::string> lastActions, double timeBank);
+	HandOverPacket(int my_stack_size, int villain_stack_size,
+			int num_board_cards, std::vector<Card*> board_cards, int num_last_actions,
+			std::vector<std::string> last_actions, double time_bank);
 
 	// Implement abstract methods
 	void UpdateGameState(GameState *gs);
+	std::string GetType() { return "HAND_OVER_PACKET"; }
 
 private:
-	int m_my_stack_size;
+	int m_stack_size;
 	int m_villain_stack_size;
 	int m_num_board_cards;
 	std::vector<Card*> m_board_cards;

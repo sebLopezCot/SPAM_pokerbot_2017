@@ -20,6 +20,7 @@ public:
 
 	// Implement abstract methods
 	void UpdateGameState(GameState *gs);
+	std::string GetType() { return "GET_ACTION_PACKET"; }
 
 private:
 	int m_pot_size;
@@ -29,7 +30,7 @@ private:
 	std::vector<std::string> m_last_actions;
 	int m_num_legal_actions;
 	std::vector<std::string> m_legal_actions;
-	double time_bank;
+	double m_time_bank;
 };
 
 #endif

@@ -2,866 +2,878 @@
 Hand #1, P1 (0), DEBUG_BOT (0)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [3d 6c]
-Dealt to DEBUG_BOT [Ks 2c]
+Dealt to P1 [7s 2h]
+Dealt to DEBUG_BOT [Qh Ac]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
 Hand #2, DEBUG_BOT (1), P1 (-1)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [Th 6h]
-Dealt to P1 [9h 4d]
+Dealt to DEBUG_BOT [7h Ks]
+Dealt to P1 [7c Ac]
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #3, P1 (0), DEBUG_BOT (0)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [4d 6h]
+Dealt to DEBUG_BOT [5s Ts]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #4, DEBUG_BOT (1), P1 (-1)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Kh Ks]
+Dealt to P1 [7d Qh]
 DEBUG_BOT calls
 P1 checks
-*** FLOP *** (4) [Ad 9s Kh]
+*** FLOP *** (4) [Jh 3s 6s]
 P1 checks
 DEBUG_BOT checks
 P1 checks
 DEBUG_BOT checks
-*** TURN *** (4) [Ad 9s Kh] [8s]
+*** TURN *** (4) [Jh 3s 6s] [As]
 P1 checks
 DEBUG_BOT checks
 P1 checks
 DEBUG_BOT checks
-*** RIVER *** (4) [Ad 9s Kh 8s] [2h]
+*** RIVER *** (4) [Jh 3s 6s As] [5d]
 P1 checks
 DEBUG_BOT checks
-DEBUG_BOT shows [Th 6h]
-P1 shows [9h 4d]
-P1 wins the pot (4)
+DEBUG_BOT shows [Kh Ks]
+P1 shows [7d Qh]
+DEBUG_BOT wins the pot (4)
 
-Hand #3, P1 (1), DEBUG_BOT (-1)
+Hand #5, P1 (-3), DEBUG_BOT (3)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [3c 9d]
-Dealt to DEBUG_BOT [9h 3h]
+Dealt to P1 [8d Qd]
+Dealt to DEBUG_BOT [6c 9d]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #4, DEBUG_BOT (0), P1 (0)
+Hand #6, DEBUG_BOT (4), P1 (-4)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [6h 2h]
-Dealt to P1 [2d 3s]
-### DEBUG_BOT took too long to respond. Playing default...
+Dealt to DEBUG_BOT [6h Td]
+Dealt to P1 [4c Ad]
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #5, P1 (1), DEBUG_BOT (-1)
+Hand #7, P1 (-3), DEBUG_BOT (3)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [7c 2h]
-Dealt to DEBUG_BOT [8d 3d]
+Dealt to P1 [9s Tc]
+Dealt to DEBUG_BOT [5s Td]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #6, DEBUG_BOT (0), P1 (0)
+Hand #8, DEBUG_BOT (4), P1 (-4)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [Th Qh]
-Dealt to P1 [9d 5h]
+Dealt to DEBUG_BOT [4s 9s]
+Dealt to P1 [6s 8h]
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #9, P1 (-3), DEBUG_BOT (3)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [4c Kc]
+Dealt to DEBUG_BOT [5d Ts]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #10, DEBUG_BOT (4), P1 (-4)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [3c Tc]
+Dealt to P1 [9c Ks]
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #11, P1 (-3), DEBUG_BOT (3)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [5c 6c]
+Dealt to DEBUG_BOT [Th Jh]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #12, DEBUG_BOT (4), P1 (-4)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [8s 2c]
+Dealt to P1 [7c Jd]
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #13, P1 (-3), DEBUG_BOT (3)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [Jd Kc]
+Dealt to DEBUG_BOT [Jh 7h]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #14, DEBUG_BOT (4), P1 (-4)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Jh 5c]
+Dealt to P1 [As 2d]
+DEBUG_BOT calls
+P1 checks
+*** FLOP *** (4) [Ts Kd 3s]
+P1 checks
 ### DEBUG_BOT had an unparseable response. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
+DEBUG_BOT checks
+P1 checks
+DEBUG_BOT checks
+*** TURN *** (4) [Ts Kd 3s] [9c]
+P1 checks
+DEBUG_BOT checks
+P1 checks
+### DEBUG_BOT had an unparseable response. Playing default...
+DEBUG_BOT checks
+*** RIVER *** (4) [Ts Kd 3s 9c] [Qc]
+P1 checks
+DEBUG_BOT bets 2
+P1 folds
+Uncalled bet of 2 returned to DEBUG_BOT
+DEBUG_BOT wins the pot (4)
 
-Hand #7, P1 (1), DEBUG_BOT (-1)
+Hand #15, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [8d 5c]
-Dealt to DEBUG_BOT [8s 5h]
+Dealt to P1 [9d 4s]
+Dealt to DEBUG_BOT [5h 2s]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #8, DEBUG_BOT (0), P1 (0)
+Hand #16, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [Tc Qh]
-Dealt to P1 [8d 5h]
+Dealt to DEBUG_BOT [2d 2s]
+Dealt to P1 [Td Ks]
 ### DEBUG_BOT disconncted. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #9, P1 (1), DEBUG_BOT (-1)
+Hand #17, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [3c Qc]
-Dealt to DEBUG_BOT [5d 8c]
+Dealt to P1 [3s 2h]
+Dealt to DEBUG_BOT [Th Kh]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #10, DEBUG_BOT (0), P1 (0)
+Hand #18, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [6c Kd]
-Dealt to P1 [7s 8c]
+Dealt to DEBUG_BOT [4c Th]
+Dealt to P1 [6c 9d]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #11, P1 (1), DEBUG_BOT (-1)
+Hand #19, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [9s 9d]
-Dealt to DEBUG_BOT [Js Ad]
+Dealt to P1 [3d Qd]
+Dealt to DEBUG_BOT [As 7d]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #12, DEBUG_BOT (0), P1 (0)
+Hand #20, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [Jh 2c]
-Dealt to P1 [9s Td]
+Dealt to DEBUG_BOT [5s 3d]
+Dealt to P1 [Qs Tc]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #13, P1 (1), DEBUG_BOT (-1)
+Hand #21, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [4d 7c]
-Dealt to DEBUG_BOT [5c Tc]
+Dealt to P1 [Td 7c]
+Dealt to DEBUG_BOT [5h 8d]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #14, DEBUG_BOT (0), P1 (0)
+Hand #22, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [2d 7s]
-Dealt to P1 [Qd 6h]
+Dealt to DEBUG_BOT [6c Qh]
+Dealt to P1 [Ks 4c]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #15, P1 (1), DEBUG_BOT (-1)
+Hand #23, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [3s 7h]
-Dealt to DEBUG_BOT [Qs Ts]
+Dealt to P1 [Ah 9c]
+Dealt to DEBUG_BOT [4d 2c]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #16, DEBUG_BOT (0), P1 (0)
+Hand #24, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [4s 6d]
-Dealt to P1 [8c 3c]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #17, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [5s Qh]
-Dealt to DEBUG_BOT [6s 5d]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #18, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [2d Jc]
-Dealt to P1 [3h 6s]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #19, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [6d 2d]
-Dealt to DEBUG_BOT [3s Qh]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #20, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [6d 4d]
-Dealt to P1 [8s 2s]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #21, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [2d Ks]
-Dealt to DEBUG_BOT [5s 6c]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #22, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Ah 4c]
-Dealt to P1 [Tc 5d]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #23, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Td 2h]
-Dealt to DEBUG_BOT [4c 2s]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #24, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [7s Qc]
-Dealt to P1 [Th 7h]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #25, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [3h 6d]
-Dealt to DEBUG_BOT [2d Ad]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #26, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Jd Ah]
-Dealt to P1 [3h 8h]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #27, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Kd 2d]
-Dealt to DEBUG_BOT [9d As]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #28, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Kd 2c]
-Dealt to P1 [Th 2d]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #29, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Jh Tc]
-Dealt to DEBUG_BOT [2s 4s]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #30, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [5s 6h]
-Dealt to P1 [7h 7d]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #31, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [5d 2c]
-Dealt to DEBUG_BOT [9d 3c]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #32, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Ac 7d]
-Dealt to P1 [Jd Jc]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #33, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Ts Js]
-Dealt to DEBUG_BOT [Jh 4h]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #34, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Kd 3s]
-Dealt to P1 [3h Qd]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #35, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [9c Qd]
-Dealt to DEBUG_BOT [3h 4c]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #36, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Td 3d]
-Dealt to P1 [Kc 2h]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #37, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [8c 2d]
-Dealt to DEBUG_BOT [5d 3d]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #38, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [4d Js]
-Dealt to P1 [Ac Jc]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #39, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Qc Kc]
-Dealt to DEBUG_BOT [Qs As]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #40, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Qd Ad]
-Dealt to P1 [3s 6h]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #41, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Kh 9d]
-Dealt to DEBUG_BOT [Jh 4d]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #42, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [4s Td]
-Dealt to P1 [Kc 6c]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #43, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [7d Kd]
-Dealt to DEBUG_BOT [5d Tc]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #44, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [5d 9s]
-Dealt to P1 [3h As]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #45, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Th Kc]
-Dealt to DEBUG_BOT [Kh Qs]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #46, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [5c 7s]
-Dealt to P1 [8s Tc]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #47, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [6d Ah]
-Dealt to DEBUG_BOT [9c 5h]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #48, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Ks 5h]
-Dealt to P1 [3s 6d]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #49, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [7s Qc]
-Dealt to DEBUG_BOT [9d 9s]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #50, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Qs Kh]
-Dealt to P1 [Jd 5h]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #51, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Qd 5d]
-Dealt to DEBUG_BOT [7h Kc]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #52, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [9h Kc]
-Dealt to P1 [Kd Kh]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #53, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Jh Ad]
-Dealt to DEBUG_BOT [9d 4s]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #54, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Qh 3h]
-Dealt to P1 [8s Jh]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #55, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Jc 3c]
-Dealt to DEBUG_BOT [7c Ts]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #56, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [6s 3h]
-Dealt to P1 [Ad 9h]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #57, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Js 5c]
-Dealt to DEBUG_BOT [9c Ac]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #58, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [Tc Ah]
-Dealt to P1 [Js 9h]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #59, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Ks 5h]
-Dealt to DEBUG_BOT [As 9s]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #60, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [8c 8s]
-Dealt to P1 [7d 4c]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #61, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
-Dealt to P1 [Qd 6s]
-Dealt to DEBUG_BOT [4d 9c]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #62, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [9s Ts]
-Dealt to P1 [As 4h]
-### DEBUG_BOT is not available. Playing default...
-DEBUG_BOT folds
-P1 wins the pot (3)
-
-Hand #63, P1 (1), DEBUG_BOT (-1)
-P1 posts the blind of 1
-DEBUG_BOT posts the blind of 2
+Dealt to DEBUG_BOT [6c Qs]
 Dealt to P1 [3h Kc]
-Dealt to DEBUG_BOT [5c 7d]
-P1 folds
-DEBUG_BOT wins the pot (3)
-
-Hand #64, DEBUG_BOT (0), P1 (0)
-DEBUG_BOT posts the blind of 1
-P1 posts the blind of 2
-Dealt to DEBUG_BOT [7d 4h]
-Dealt to P1 [Qs 7s]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #65, P1 (1), DEBUG_BOT (-1)
+Hand #25, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [Qh 2c]
-Dealt to DEBUG_BOT [5c 4c]
+Dealt to P1 [4c Kc]
+Dealt to DEBUG_BOT [Kh 3s]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #66, DEBUG_BOT (0), P1 (0)
+Hand #26, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [8c 7d]
-Dealt to P1 [Ts Td]
+Dealt to DEBUG_BOT [Jd 7h]
+Dealt to P1 [9c Td]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #67, P1 (1), DEBUG_BOT (-1)
+Hand #27, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [8d Ad]
-Dealt to DEBUG_BOT [5h Qc]
+Dealt to P1 [2d 9d]
+Dealt to DEBUG_BOT [4s 5d]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #68, DEBUG_BOT (0), P1 (0)
+Hand #28, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [Qd 3c]
+Dealt to DEBUG_BOT [Jh 9c]
+Dealt to P1 [8c Ts]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #29, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [Jh 3d]
+Dealt to DEBUG_BOT [Jd 5s]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #30, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Kc 5d]
+Dealt to P1 [9s 2d]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #31, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [Jh 4h]
+Dealt to DEBUG_BOT [Ac 3h]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #32, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [3d 9h]
+Dealt to P1 [2d Jd]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #33, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [Ks Qh]
+Dealt to DEBUG_BOT [9h 2h]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #34, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Qs 9s]
+Dealt to P1 [8s 6s]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #35, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [Td 6d]
+Dealt to DEBUG_BOT [8c 5d]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #36, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Kc 2c]
+Dealt to P1 [5h Jh]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #37, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [9d Jc]
+Dealt to DEBUG_BOT [Jd Js]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #38, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [7c Ac]
+Dealt to P1 [Kc Ad]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #39, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [Qd 6h]
+Dealt to DEBUG_BOT [8d 7c]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #40, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [5h 6c]
+Dealt to P1 [Ac 3d]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #41, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [4s Ts]
+Dealt to DEBUG_BOT [2c Qc]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #42, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Jc 4d]
+Dealt to P1 [4h Jd]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #43, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [2s 8d]
+Dealt to DEBUG_BOT [Jc 5s]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #44, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Jh 5c]
+Dealt to P1 [6s 6h]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #45, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [4d 5h]
+Dealt to DEBUG_BOT [6h 9h]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #46, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Qs 6h]
+Dealt to P1 [5s 8h]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #47, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [2s 8s]
+Dealt to DEBUG_BOT [Jd Th]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #48, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Jd 6d]
+Dealt to P1 [2d 5s]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #49, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [5h 9d]
+Dealt to DEBUG_BOT [Kh 4s]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #50, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Td 6s]
+Dealt to P1 [3s Kd]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #51, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [9d Qh]
+Dealt to DEBUG_BOT [3d 8h]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #52, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [4d 9s]
+Dealt to P1 [6d Tc]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #53, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [3d Jc]
+Dealt to DEBUG_BOT [3s 2c]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #54, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Js 2h]
+Dealt to P1 [5d Qh]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #55, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [Td 4d]
+Dealt to DEBUG_BOT [Kh Qc]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #56, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [2s 4s]
+Dealt to P1 [7s 6s]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #57, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [2s Jh]
+Dealt to DEBUG_BOT [2c 9s]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #58, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [7c 8c]
+Dealt to P1 [2c Kh]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #59, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [Qs Ad]
+Dealt to DEBUG_BOT [6c 8d]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #60, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Jd 6d]
 Dealt to P1 [8h 3h]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #69, P1 (1), DEBUG_BOT (-1)
+Hand #61, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [Jh Tc]
-Dealt to DEBUG_BOT [8h 7h]
+Dealt to P1 [3c Js]
+Dealt to DEBUG_BOT [Qd 6c]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #70, DEBUG_BOT (0), P1 (0)
+Hand #62, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [As Th]
-Dealt to P1 [Qs 2s]
+Dealt to DEBUG_BOT [9s Ad]
+Dealt to P1 [Jd Qh]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #71, P1 (1), DEBUG_BOT (-1)
+Hand #63, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [3c Qc]
-Dealt to DEBUG_BOT [4h Ts]
+Dealt to P1 [5c 9s]
+Dealt to DEBUG_BOT [Ac 4c]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #72, DEBUG_BOT (0), P1 (0)
+Hand #64, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [Th Qh]
-Dealt to P1 [3c 2d]
+Dealt to DEBUG_BOT [Ac As]
+Dealt to P1 [7h Jd]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #73, P1 (1), DEBUG_BOT (-1)
+Hand #65, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [3s Jc]
-Dealt to DEBUG_BOT [3d 9h]
+Dealt to P1 [Tc Ks]
+Dealt to DEBUG_BOT [7s 2h]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #74, DEBUG_BOT (0), P1 (0)
+Hand #66, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [As 9d]
-Dealt to P1 [Qc 3c]
+Dealt to DEBUG_BOT [9s Kc]
+Dealt to P1 [4h 3d]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #75, P1 (1), DEBUG_BOT (-1)
+Hand #67, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [3s 3d]
-Dealt to DEBUG_BOT [Qh 7s]
+Dealt to P1 [Ks 9s]
+Dealt to DEBUG_BOT [4h 5s]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #76, DEBUG_BOT (0), P1 (0)
+Hand #68, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [Jc 8h]
-Dealt to P1 [3s Td]
+Dealt to DEBUG_BOT [Qd Qh]
+Dealt to P1 [3h Js]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #77, P1 (1), DEBUG_BOT (-1)
+Hand #69, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [4c Kc]
-Dealt to DEBUG_BOT [8s 2h]
+Dealt to P1 [3c Tc]
+Dealt to DEBUG_BOT [7c Jh]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #78, DEBUG_BOT (0), P1 (0)
+Hand #70, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [5c 5h]
-Dealt to P1 [Jd 4c]
+Dealt to DEBUG_BOT [Ah Kd]
+Dealt to P1 [6c 7s]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #79, P1 (1), DEBUG_BOT (-1)
+Hand #71, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [Ks 6d]
-Dealt to DEBUG_BOT [Qc 9c]
+Dealt to P1 [5s 8d]
+Dealt to DEBUG_BOT [3c 9c]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #80, DEBUG_BOT (0), P1 (0)
+Hand #72, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [3d Qh]
-Dealt to P1 [7c Tc]
+Dealt to DEBUG_BOT [Qc Qh]
+Dealt to P1 [8c 6s]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #81, P1 (1), DEBUG_BOT (-1)
+Hand #73, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [5d 7c]
-Dealt to DEBUG_BOT [Ah Ts]
+Dealt to P1 [Ac Kc]
+Dealt to DEBUG_BOT [2s 2c]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #82, DEBUG_BOT (0), P1 (0)
+Hand #74, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [7d 5h]
-Dealt to P1 [Qd Jd]
+Dealt to DEBUG_BOT [7h 7d]
+Dealt to P1 [4s Qs]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #83, P1 (1), DEBUG_BOT (-1)
+Hand #75, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [3d 7c]
-Dealt to DEBUG_BOT [Qc 2s]
+Dealt to P1 [6d 6c]
+Dealt to DEBUG_BOT [Ah Th]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #84, DEBUG_BOT (0), P1 (0)
+Hand #76, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [8s 3c]
-Dealt to P1 [7s 8d]
+Dealt to DEBUG_BOT [Js 2s]
+Dealt to P1 [4d 5d]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #85, P1 (1), DEBUG_BOT (-1)
+Hand #77, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [3h 6h]
-Dealt to DEBUG_BOT [Qs 5h]
+Dealt to P1 [2d Th]
+Dealt to DEBUG_BOT [Td Ad]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #86, DEBUG_BOT (0), P1 (0)
+Hand #78, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [9c Ts]
-Dealt to P1 [8s 5h]
+Dealt to DEBUG_BOT [5s 7h]
+Dealt to P1 [5h Ac]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #87, P1 (1), DEBUG_BOT (-1)
+Hand #79, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [2d 2h]
-Dealt to DEBUG_BOT [5d 2s]
+Dealt to P1 [3s Qh]
+Dealt to DEBUG_BOT [Qs 2d]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #88, DEBUG_BOT (0), P1 (0)
+Hand #80, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [4s 3c]
-Dealt to P1 [8s Jd]
+Dealt to DEBUG_BOT [8c 4s]
+Dealt to P1 [9h Qh]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #89, P1 (1), DEBUG_BOT (-1)
+Hand #81, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [8c As]
-Dealt to DEBUG_BOT [8h Kh]
+Dealt to P1 [Qs Jh]
+Dealt to DEBUG_BOT [2c 2d]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #90, DEBUG_BOT (0), P1 (0)
+Hand #82, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [6d 2c]
-Dealt to P1 [Kh Js]
+Dealt to DEBUG_BOT [2c 8h]
+Dealt to P1 [Kd Qc]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #91, P1 (1), DEBUG_BOT (-1)
+Hand #83, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [Jc 4c]
-Dealt to DEBUG_BOT [6d 8h]
+Dealt to P1 [Qh Qs]
+Dealt to DEBUG_BOT [2h Td]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #92, DEBUG_BOT (0), P1 (0)
+Hand #84, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [Jc 4s]
-Dealt to P1 [7d Kh]
+Dealt to DEBUG_BOT [Js 3s]
+Dealt to P1 [9c 6h]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #93, P1 (1), DEBUG_BOT (-1)
+Hand #85, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [3c 8d]
-Dealt to DEBUG_BOT [6h Qh]
+Dealt to P1 [5c Ah]
+Dealt to DEBUG_BOT [9s Ad]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #94, DEBUG_BOT (0), P1 (0)
+Hand #86, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [4s Qd]
-Dealt to P1 [Kc 2s]
+Dealt to DEBUG_BOT [Kd Kc]
+Dealt to P1 [5h Ks]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #95, P1 (1), DEBUG_BOT (-1)
+Hand #87, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [Jc Ts]
-Dealt to DEBUG_BOT [8h Ks]
+Dealt to P1 [3c 4h]
+Dealt to DEBUG_BOT [Jd 7h]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #96, DEBUG_BOT (0), P1 (0)
+Hand #88, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [Ah 5c]
-Dealt to P1 [8s 9c]
+Dealt to DEBUG_BOT [Kh Jd]
+Dealt to P1 [6d 9d]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #97, P1 (1), DEBUG_BOT (-1)
+Hand #89, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [Jh Kd]
-Dealt to DEBUG_BOT [2c 7h]
+Dealt to P1 [Th 9c]
+Dealt to DEBUG_BOT [6s Ad]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #98, DEBUG_BOT (0), P1 (0)
+Hand #90, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [9d Ac]
-Dealt to P1 [4h Qh]
+Dealt to DEBUG_BOT [As Td]
+Dealt to P1 [Qs 6d]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-Hand #99, P1 (1), DEBUG_BOT (-1)
+Hand #91, P1 (-6), DEBUG_BOT (6)
 P1 posts the blind of 1
 DEBUG_BOT posts the blind of 2
-Dealt to P1 [Tc 8d]
-Dealt to DEBUG_BOT [7d Ah]
+Dealt to P1 [6d Th]
+Dealt to DEBUG_BOT [As Ts]
 P1 folds
 DEBUG_BOT wins the pot (3)
 
-Hand #100, DEBUG_BOT (0), P1 (0)
+Hand #92, DEBUG_BOT (7), P1 (-7)
 DEBUG_BOT posts the blind of 1
 P1 posts the blind of 2
-Dealt to DEBUG_BOT [9c Qh]
-Dealt to P1 [6d 8c]
+Dealt to DEBUG_BOT [Ts 4h]
+Dealt to P1 [3s 4d]
 ### DEBUG_BOT is not available. Playing default...
 DEBUG_BOT folds
 P1 wins the pot (3)
 
-FINAL: P1 (1) DEBUG_BOT (-1)
+Hand #93, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [Jh 3c]
+Dealt to DEBUG_BOT [2c 4h]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #94, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [As Qs]
+Dealt to P1 [Js 2c]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #95, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [2h Qh]
+Dealt to DEBUG_BOT [4s 8h]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #96, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [Jc 5d]
+Dealt to P1 [7h Ac]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #97, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [9c Jh]
+Dealt to DEBUG_BOT [3s Th]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #98, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [2c Ac]
+Dealt to P1 [Kh 4d]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+Hand #99, P1 (-6), DEBUG_BOT (6)
+P1 posts the blind of 1
+DEBUG_BOT posts the blind of 2
+Dealt to P1 [9d Ks]
+Dealt to DEBUG_BOT [3c As]
+P1 folds
+DEBUG_BOT wins the pot (3)
+
+Hand #100, DEBUG_BOT (7), P1 (-7)
+DEBUG_BOT posts the blind of 1
+P1 posts the blind of 2
+Dealt to DEBUG_BOT [2h Ah]
+Dealt to P1 [3h Tc]
+### DEBUG_BOT is not available. Playing default...
+DEBUG_BOT folds
+P1 wins the pot (3)
+
+FINAL: P1 (-6) DEBUG_BOT (6)

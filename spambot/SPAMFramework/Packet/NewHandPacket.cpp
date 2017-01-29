@@ -1,20 +1,24 @@
 #include "NewHandPacket.h"
 
-NewHandPacket::NewHandPacket(int stack_size, int big_blind, 
-		int num_hands, double time_bank) {
+NewHandPacket::NewHandPacket(int hand_id, bool is_dealer, Card *card1, 
+			Card *card2, int my_bank, int villain_bank, double time_bank) {
 
-	m_stack_size = stack_size;
-	m_big_blind = big_blind;
-	m_num_hands = num_hands;
+	m_hand_id = hand_id;
+	m_is_dealer = is_dealer;
+	m_card1 = card1;
+	m_card2 = card2;
+	m_my_bank = my_bank;
+	m_villain_bank = villain_bank;
 	m_time_bank = time_bank;
 }
 
 void NewHandPacket::UpdateGameState(GameState *gs) {
-	gs->SetNumStartingChips(m_stack_size);
-	gs->SetMyStackSize(m_stack_size);
-	gs->SetVillainStackSize(m_stack_size);
-	gs->SetBigBlindAmount(m_big_blind);
-	gs->SetNumHandsLeft(m_num_hands);
-	gs->SetHandDuration(m_time_bank);
-	gs->SetCurrentStreet(GameState::PREGAME);
+	gs->SetCurrentHandID(m_hand_id);
+	gs->SetDealer(m_is_dealer);
+	gs->SetCard1(m_card1);
+	gs->SetCard2(m_card2);
+	gs->SetMyStackSize(gs->GetNumStartingChips() + m_my_bank);
+	gs->SetVillainStackSize(gs->GetNumStartingChips() + m_villain_bank);
+	gs->SetTimeLeft(m_time_bank);
+	gs->SetCurrentStreet(GameState::PREFLOP);
 }

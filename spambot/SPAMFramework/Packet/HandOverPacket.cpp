@@ -1,10 +1,10 @@
 #include "HandOverPacket.h"
 
-HandOverPacket::HandOverPacket(int myStackSize, int villainStackSize,
-			int numBoardCards, std::vector<Card*> boardCards, int numLastActions,
-			std::vector<std::string> lastActions, double timeBank) {
+HandOverPacket::HandOverPacket(int my_stack_size, int villain_stack_size,
+			int num_board_cards, std::vector<Card*> board_cards, int num_last_actions,
+			std::vector<std::string> last_actions, double time_bank) {
 
-	m_my_stack_size = my_stack_size;
+	m_stack_size = my_stack_size;
 	m_villain_stack_size = villain_stack_size;
 	m_num_board_cards = num_board_cards;
 	m_board_cards = board_cards;
@@ -14,7 +14,7 @@ HandOverPacket::HandOverPacket(int myStackSize, int villainStackSize,
 }
 
 void HandOverPacket::UpdateGameState(GameState *gs) {
-	gs->SetMyStackSize(m_my_stack_size);
+	gs->SetMyStackSize(m_stack_size);
 	gs->SetVillainStackSize(m_villain_stack_size);
 	gs->SetCurrentStreet(GameState::HANDOVER);
 	gs->SetBoardCards(m_board_cards);

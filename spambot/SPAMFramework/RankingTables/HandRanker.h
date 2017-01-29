@@ -5,9 +5,12 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <sstream>
 #include <fstream>
 
 #include "RankingTableConfig.h"
+#include "../Card.h"
+#include "../Util/SPAMHelper.h"
 
 class HandRanker
 {
@@ -23,12 +26,12 @@ public:
 
 	int ParseRanking(std::string hand_string, std::string board_card_string);
 
-	bool Compare(std::vector<int> self, std::vector<int> other);
+	static bool Compare(std::vector<int> self, std::vector<int> other);
 
 private:
-	const int m_num_hand_cards = 2;
+	int m_num_hand_cards;
 	int m_num_board_cards;
-	const std::string m_table_location;
+	std::string m_table_location;
 };
 
 #endif

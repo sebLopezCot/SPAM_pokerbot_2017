@@ -1,20 +1,18 @@
+
 #include "Timer.h"
 
-Timer::Timer(){
-	ResetAndStart();
+Timer::Timer() {
+	Restart();
 }
 
-void Timer::ResetAndStart() {
-	m_last_time = boost::chrono::high_resolution_clock::now();
+void Timer::Restart()
+{
+    _start_time = boost::chrono::high_resolution_clock::now();
 }
 
-double Timer::GetElapsedTime() {
-	boost::chrono::high_resolution_clock::time_point current = 
-			boost::chrono::high_resolution_clock::now();
-
-	int ns = boost::chrono::duration_cast<boost::chrono::nanoseconds>(current - m_last_time).count();
-	double secs = ns * 1e-9;
-	return secs;
+double Timer::GetElapsedTime()
+{
+    boost::chrono::nanoseconds nano_s = boost::chrono::duration_cast<boost::chrono::nanoseconds>(boost::chrono::high_resolution_clock::now() - _start_time);
+    double d = static_cast<boost::uint64_t>(nano_s.count()) * 1e-9;
+    return d;
 }
-
-

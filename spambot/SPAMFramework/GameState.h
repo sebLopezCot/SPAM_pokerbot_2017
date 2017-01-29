@@ -97,7 +97,7 @@ private:
 	std::vector<Card*> m_board_cards; 	// cards on the table
 	std::vector<std::string> m_legal_actions; // legal actions for this street
 	int m_num_starting_chips;	// number of chips
-	int m_my_stack_size;			// number of chips left in player's stack
+	int m_stack_size;			// number of chips left in player's stack
 	int m_villain_stack_size;	// number of chips left in other player's stack
 	int m_big_blind_amount; 	// number of chips for a big blind
 	int m_num_hands_left;		// number of hands left

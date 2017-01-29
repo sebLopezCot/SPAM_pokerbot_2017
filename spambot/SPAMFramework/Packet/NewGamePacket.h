@@ -1,6 +1,8 @@
 #ifndef NEW_GAME_PACKET_H
 #define NEW_GAME_PACKET_H 
 
+#include <string>
+
 #include "Packet.h"
 #include "../GameState.h"
 
@@ -12,6 +14,7 @@ public:
 	
 	// Implement abstract methods
 	void UpdateGameState(GameState *gs);
+	std::string GetType() { return "NEW_GAME_PACKET"; }
 
 private:
 	int m_stack_size;

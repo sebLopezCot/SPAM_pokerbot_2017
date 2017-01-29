@@ -15,12 +15,13 @@ public:
 	static std::vector<std::string> GetCardList();
 	static bool IsCard(std::string card_id);
 
+	
 	std::string ToString();
 	int ToNumber();
 
 private:
 	std::string m_id;
-	static const map<std::string, int> card_id_to_number;
+	static std::map<std::string, int> card_id_to_number;
 };
 
 #endif

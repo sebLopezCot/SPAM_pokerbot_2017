@@ -6,6 +6,7 @@
 #include <vector>
 #include <sstream>
 
+#include "../Util/SPAMHelper.h"
 #include "Packet.h"
 #include "NewGamePacket.h"
 #include "NewHandPacket.h"
@@ -21,7 +22,6 @@ public:
 	Packet* Parse(std::string raw_input);
 
 	static std::vector<std::string> split(std::string str, char delimiter);
-	static bool to_bool(std::string s);
 };
 
 #endif
