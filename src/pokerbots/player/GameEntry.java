@@ -11,6 +11,7 @@ import pokerbots.spam_framework.packet.Packet;
 import pokerbots.spam_framework.packet.PacketParser;
 import pokerbots.spam_framework.packet.RequestKeyValuesPacket;
 import pokerbots.spam_framework.strategy.CheckFoldStrategy;
+import pokerbots.spam_framework.strategy.PotOddStrategy;
 
 /**
  * Simple example pokerbot, written in Java.
@@ -39,7 +40,8 @@ public class GameEntry {
 			// Start a new game engine
 			GameState gameState = new GameState();
 			PacketParser parser = new PacketParser();
-			CheckFoldStrategy basicStrat = new CheckFoldStrategy();
+//			CheckFoldStrategy basicStrat = new CheckFoldStrategy();
+			PotOddStrategy basicStrat = new PotOddStrategy();
 			
 			// Block until engine sends us a packet; read it into input.
 			while ((input = inStream.readLine()) != null) {
