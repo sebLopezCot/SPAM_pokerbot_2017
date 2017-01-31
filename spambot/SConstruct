@@ -1,5 +1,12 @@
 import os
 import fnmatch
+import zipfile
+
+# unzip ranking tables
+zip_ref = zipfile.ZipFile('ranking_tables.zip', 'r')
+zip_ref.extractall('.')
+zip_ref.close()
+
 
 matches = []
 for root, dirnames, filenames in os.walk('.'):
