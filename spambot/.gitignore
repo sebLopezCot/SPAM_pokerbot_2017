@@ -3,6 +3,8 @@
 *.lo
 *.o
 
+SPAM.zip
+
 # Compiled Dynamic libraries
 *.so
 *.dylib
