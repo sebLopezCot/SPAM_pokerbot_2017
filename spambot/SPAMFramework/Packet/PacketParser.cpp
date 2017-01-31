@@ -1,20 +1,8 @@
 #include "PacketParser.h"
 
-std::vector<std::string> PacketParser::split(std::string str, char delimiter) {
-	std::vector<std::string> internal;
-	std::stringstream ss(str);
-	std::string tok;
-
-	while(std::getline(ss, tok, delimiter)) {
-		internal.push_back(tok);
-	}
-
-	return internal;
-}
-
 Packet* PacketParser::Parse(std::string raw_input) {
 	// Split up the incoming packet into pieces to parse
-	std::vector<std::string> data = split(raw_input, ' ');
+	std::vector<std::string> data = SPAMHelper::split(raw_input, ' ');
 
 	if (data.size() > 0) {
 
@@ -22,7 +10,8 @@ Packet* PacketParser::Parse(std::string raw_input) {
 		std::string packet_type = data[0];
 
 		if (packet_type == "NEWGAME") {
-
+			std::string my_name = data[1];
+			std::string villain_name = data[2];
 			int stack_size;
 			std::istringstream(data[3]) >> stack_size;
 			int big_blind;
@@ -32,7 +21,7 @@ Packet* PacketParser::Parse(std::string raw_input) {
 			double time_bank;
 			std::istringstream(data[6]) >> time_bank;
 
-			return new NewGamePacket(stack_size, big_blind, num_hands, time_bank);
+			return new NewGamePacket(my_name, villain_name, stack_size, big_blind, num_hands, time_bank);
 
 		} else if (packet_type == "NEWHAND") {
 

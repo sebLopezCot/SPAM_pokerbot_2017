@@ -9,7 +9,7 @@
 class NewGamePacket : public Packet
 {
 public:
-	NewGamePacket(int stack_size, int big_blind, 
+	NewGamePacket(std::string my_name, std::string villain_name, int stack_size, int big_blind,
 		int num_hands, double time_bank);
 	
 	// Implement abstract methods
@@ -21,6 +21,8 @@ private:
 	int m_big_blind;
 	int m_num_hands;
 	double m_time_bank;
+	std::string m_my_name;
+	std::string m_villain_name;
 };
 
 #endif

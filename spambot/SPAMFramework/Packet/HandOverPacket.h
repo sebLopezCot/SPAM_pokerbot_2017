@@ -20,8 +20,8 @@ public:
 	std::string GetType() { return "HAND_OVER_PACKET"; }
 
 private:
-	int m_stack_size;
-	int m_villain_stack_size;
+	int m_my_bank;
+	int m_villain_bank;
 	int m_num_board_cards;
 	std::vector<Card*> m_board_cards;
 	int m_num_last_actions;

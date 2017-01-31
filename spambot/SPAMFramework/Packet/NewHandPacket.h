@@ -10,7 +10,7 @@
 class NewHandPacket : public Packet
 {
 public:
-	NewHandPacket(int hand_id, bool is_dealer, Card *card1, 
+	NewHandPacket(int hand_id, bool is_dealer, Card *card1,
 			Card *card2, int my_bank, int villain_bank, double time_bank);
 
 	// Implement abstract methods

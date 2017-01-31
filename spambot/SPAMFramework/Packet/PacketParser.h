@@ -20,8 +20,6 @@ class PacketParser
 public:
 	
 	Packet* Parse(std::string raw_input);
-
-	static std::vector<std::string> split(std::string str, char delimiter);
 };
 
 #endif

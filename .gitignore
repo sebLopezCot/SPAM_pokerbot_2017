@@ -5,6 +5,9 @@ sqlite.db
 # ranking tables
 ranking_tables/*
 
+# output files
+to_server
+
 .metadata
 bin/
 tmp/

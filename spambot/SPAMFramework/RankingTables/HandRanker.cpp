@@ -1,13 +1,14 @@
 #include "HandRanker.h"
 
-HandRanker::HandRanker(int num_board_cards, std::string table_location) {
+HandRanker::HandRanker(int num_board_cards, std::string table_location, int ranker_type) {
 	m_num_hand_cards = 2;
 	m_num_board_cards = num_board_cards;
 	m_table_location = table_location;
+	m_ranker_type = ranker_type;
 }
 
-int HandRanker::GetValue(std::vector<Card*> hand, std::vector<Card*> board_cards) {
-	int rank = -1;
+double HandRanker::GetValue(std::vector<Card*> hand, std::vector<Card*> board_cards) {
+	double rank = -1;
 
 	// Make sure card arrays are of right lengths
 	try {
@@ -31,6 +32,11 @@ int HandRanker::GetValue(std::vector<Card*> hand, std::vector<Card*> board_cards
 			// Parse ranking from table in file system
 			rank = ParseRanking(hand_and_board_card_strings[0], hand_and_board_card_strings[1]);
 
+			// If we have a winnings ranker, normalize
+			if (m_ranker_type == HandRanker::WINNING_RATE) {
+				rank = (1080.0 - (double) rank) / 1080.0;
+			}
+
 		} else {
 			throw 10;
 		}
@@ -51,6 +57,10 @@ bool HandRanker::Compare(std::vector<int> self, std::vector<int> other) {
 
 std::vector<std::string> HandRanker::MapToCompressionScheme(std::vector<int> hand_as_numbers, 
 	std::vector<int> board_cards_as_numbers) {
+
+	// Sort input arrays into increasing order
+	std::sort(hand_as_numbers.begin(), hand_as_numbers.end());
+	std::sort(board_cards_as_numbers.begin(), board_cards_as_numbers.end());
 
 	// Suit array
 	std::vector<std::vector<int> > num_of_each_suit(4);
@@ -147,6 +157,7 @@ int HandRanker::ParseRanking(std::string hand_string, std::string board_card_str
 	std::string fname = m_table_location + file_location;
 	std::ifstream file(fname.c_str());
 	std::string line;
+
 	int rank = -1;
 	while (std::getline(file, line) && rank == -1) {
 		int pos = line.find(hand_string);
@@ -154,8 +165,8 @@ int HandRanker::ParseRanking(std::string hand_string, std::string board_card_str
 
 			// Split the string and parse the ranking value
 			pos = line.find(" ");
-			std::string value = line.substr(pos+1);
-			int rank;
+			std::string value_plus_newline = line.substr(pos+1); // The last char is a newline
+			std::string value = SPAMHelper::split(value_plus_newline, '\r')[0];
 			std::istringstream(value) >> rank;
 		}
 	}

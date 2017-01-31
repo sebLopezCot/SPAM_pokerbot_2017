@@ -9,10 +9,11 @@ Player::Player() {
 void Player::run(tcp::iostream &stream) {
 
   // Init SPAM engine
+  RankingTableConfig::Init();
   GameState *gs = new GameState();
   PacketParser *parser = new PacketParser();
-  CheckFoldStrategy *strategy = new CheckFoldStrategy();
-  RankingTableConfig::Init();
+//  CheckFoldStrategy *strategy = new CheckFoldStrategy();
+  PotOddsStrategy *strategy = new PotOddsStrategy();
 
   std::string line;
   while (std::getline(stream, line)) {
@@ -46,10 +47,6 @@ void Player::run(tcp::iostream &stream) {
 
     if (DEBUG) {
       std::cout << std::endl;
-    }
-
-    if (line.compare("GETACTION") == 0){
-      stream << "CHECK\n";
     }
 
   }

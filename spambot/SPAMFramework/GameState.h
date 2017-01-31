@@ -22,14 +22,10 @@ public:
 	static const int GAMEOVER = 6;
 	
 	// ----- GETTERS AND SETTERS --------------------------------------------
-	
-	int GetMyStackSize();
 
-	void SetMyStackSize(int num_my_chips);
+	int GetSmallBlindAmount();
 
-	int GetVillainStackSize();
-
-	void SetVillainStackSize(int num_villian_chips);
+	void SetSmallBlindAmount(int small_blind_amount);
 
 	int GetBigBlindAmount();
 
@@ -42,18 +38,6 @@ public:
 	double GetHandDuration();
 
 	void SetHandDuration(double hand_duration);
-
-	bool IsDealer();
-
-	void SetDealer(bool is_dealer);
-
-	Card* GetCard2();
-
-	void SetCard2(Card *card2);
-
-	Card* GetCard1();
-
-	void SetCard1(Card *card1);
 
 	int GetCurrentHandID();
 
@@ -97,15 +81,12 @@ private:
 	std::vector<Card*> m_board_cards; 	// cards on the table
 	std::vector<std::string> m_legal_actions; // legal actions for this street
 	int m_num_starting_chips;	// number of chips
-	int m_stack_size;			// number of chips left in player's stack
-	int m_villain_stack_size;	// number of chips left in other player's stack
 	int m_big_blind_amount; 	// number of chips for a big blind
+	int m_small_blind_amount;
 	int m_num_hands_left;		// number of hands left
 	int m_current_hand_id; 		// ID of the current hand
 	double m_hand_duration;	// duration allowed for each match
 	double m_time_left;		// time left before match ends
-	bool m_is_dealer; 		// whether or not we are the dealer
-	Card *m_card1, *m_card2;		// the two cards the player has
 	int m_current_street;		// the current street of the game
 
 	PlayerHistory *m_self_history;	  // stats on our moves

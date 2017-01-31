@@ -3,22 +3,17 @@
 	GameState::GameState::GameState() {
 		m_self_history = new PlayerHistory();
 		m_villain_history = new PlayerHistory();
+
+		m_self_history->SetEnemy(m_villain_history);
+		m_villain_history->SetEnemy(m_self_history);
 	}
 
-	int GameState::GetMyStackSize(){
-		return m_stack_size;
+	int GameState::GetSmallBlindAmount() {
+		return m_small_blind_amount;
 	}
 
-	void GameState::SetMyStackSize(int num_my_chips){
-		m_stack_size = num_my_chips;
-	}
-
-	int GameState::GetVillainStackSize(){
-		return m_villain_stack_size;
-	}
-
-	void GameState::SetVillainStackSize(int num_villian_chips){
-		m_villain_stack_size = num_villian_chips;
+	void GameState::SetSmallBlindAmount(int small_blind_amount){
+		m_small_blind_amount = small_blind_amount;
 	}
 
 	int GameState::GetBigBlindAmount(){
@@ -43,30 +38,6 @@
 
 	void GameState::SetHandDuration(double hand_duration){
 		m_hand_duration = hand_duration;
-	}
-
-	bool GameState::IsDealer(){
-		return m_is_dealer;
-	}
-
-	void GameState::SetDealer(bool is_dealer){
-		m_is_dealer = is_dealer;
-	}
-
-	Card* GameState::GetCard2(){
-		return m_card2;
-	}
-
-	void GameState::SetCard2(Card *card2){
-		m_card2 = card2;
-	}
-
-	Card* GameState::GetCard1(){
-		return m_card1;
-	}
-
-	void GameState::SetCard1(Card *card1){
-		m_card1 = card1;
 	}
 
 	int GameState::GetCurrentHandID(){

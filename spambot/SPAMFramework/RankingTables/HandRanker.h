@@ -15,9 +15,14 @@
 class HandRanker
 {
 public:
-	HandRanker(int num_board_cards, std::string table_location);
+	// Enum types of hand rankers
+	static const int WINNING_RATE = 0;
+	static const int DECISION_RULE = 1;
 
-	int GetValue(std::vector<Card*> hand, std::vector<Card*> board_cards);  
+
+	HandRanker(int num_board_cards, std::string table_location, int ranker_type);
+
+	double GetValue(std::vector<Card*> hand, std::vector<Card*> board_cards);
 
 	std::vector<std::string> MapToCompressionScheme(std::vector<int> hand_as_numbers, 
 		std::vector<int> board_cards_as_numbers);
@@ -32,6 +37,7 @@ private:
 	int m_num_hand_cards;
 	int m_num_board_cards;
 	std::string m_table_location;
+	int m_ranker_type;
 };
 
 #endif

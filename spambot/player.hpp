@@ -9,7 +9,8 @@
 #include "SPAMFramework/Packet/GetActionPacket.h"
 #include "SPAMFramework/Packet/RequestKeyValuesPacket.h"
 #include "SPAMFramework/Packet/HandOverPacket.h"
-#include "SPAMFramework/Strategy/CheckFoldStrategy.h"
+//#include "SPAMFramework/Strategy/CheckFoldStrategy.h"
+#include "SPAMFramework/Strategy/PotOddsStrategy.h"
 #include "SPAMFramework/RankingTables/RankingTableConfig.h"
 
 using boost::asio::ip::tcp;

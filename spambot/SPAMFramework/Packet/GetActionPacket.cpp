@@ -33,11 +33,25 @@ void GetActionPacket::UpdateGameState(GameState *gs) {
 	gs->SetPotSize(m_pot_size);
 	gs->SetCurrentStreet(NumBoardCardsToStreet(m_num_board_cards));
 	gs->SetBoardCards(m_board_cards);
-	
-	// TODO: Need to separate the two action histories
+
 	gs->GetSelfHistory()->SetLastActions(m_last_actions);
 	gs->GetVillainHistory()->SetLastActions(m_last_actions);
+
+	gs->GetSelfHistory()->LookForDiscards();
 	
+	// When streets change
+	if (gs->GetSelfHistory()->GetLastStreet() != gs->GetCurrentStreet()) {
+		gs->GetSelfHistory()->ResetForNewStreet(gs->GetCurrentStreet());
+	}
+	if (gs->GetVillainHistory()->GetLastStreet() != gs->GetCurrentStreet()) {
+		gs->GetVillainHistory()->ResetForNewStreet(gs->GetCurrentStreet());
+	}
+
+	// Thought that this should go before street change logic so that
+	// these updates can be reset to 0 for each street
+	gs->GetSelfHistory()->UpdateBetAmounts();
+	gs->GetVillainHistory()->UpdateBetAmounts();
+
 	gs->SetLegalActions(m_legal_actions);
 	
 	gs->SetTimeLeft(m_time_bank);
