@@ -17,7 +17,7 @@ PotOddsStrategy::PotOddsStrategy() : Strategy(true) {
 	turnRanking = new HandRankerGivenTurn();
 	riverRanking = new HandRankerGivenRiver();
 
-	timer = new Timer();
+	// timer = new Timer();
 }
 
 int PotOddsStrategy::GeneralStrategy(int stage, double winRate, int amount, int pot){
@@ -183,11 +183,11 @@ int PotOddsStrategy::RiverStrategy(double winRate, int amount, int pot) {
 std::string PotOddsStrategy::GetAction(GameState *gs) {
 
 	if (gs->GetCurrentStreet() == GameState::GAMEOVER) {
-		std::cout << "AVG TIME PER FILE: " << gs->GetSelfHistory()->time_sum / (double) gs->GetSelfHistory()->num_steps << std::endl;
-		std::cout << "POT ODDS BANK ROLL: " << gs->GetSelfHistory()->GetBankRoll() << std::endl;
-		std::cout << "VILLAIN BANK ROLL: " << gs->GetVillainHistory()->GetBankRoll() << std::endl;
-		std::cout << "POT ODDS WINS: " << gs->GetSelfHistory()->GetNumWins() << std::endl;
-		std::cout << "VILLAIN WINS: " << gs->GetVillainHistory()->GetNumWins() << std::endl;
+		// std::cout << "AVG TIME PER FILE: " << gs->GetSelfHistory()->time_sum / (double) gs->GetSelfHistory()->num_steps << std::endl;
+		// std::cout << "POT ODDS BANK ROLL: " << gs->GetSelfHistory()->GetBankRoll() << std::endl;
+		// std::cout << "VILLAIN BANK ROLL: " << gs->GetVillainHistory()->GetBankRoll() << std::endl;
+		// std::cout << "POT ODDS WINS: " << gs->GetSelfHistory()->GetNumWins() << std::endl;
+		// std::cout << "VILLAIN WINS: " << gs->GetVillainHistory()->GetNumWins() << std::endl;
 		return "FINISH";
 	}
 
@@ -250,7 +250,7 @@ std::string PotOddsStrategy::GetAction(GameState *gs) {
 		// Perform our betting strategy
 		double ranking = -1;
 
-		timer->Restart();
+		// timer->Restart();
 
 		// Parse winning rate
 		switch(gs->GetCurrentStreet()) {
@@ -271,10 +271,10 @@ std::string PotOddsStrategy::GetAction(GameState *gs) {
 			break;
 		}
 
-		double et = timer->GetElapsedTime();
-		gs->GetSelfHistory()->time_sum += et;
-		gs->GetSelfHistory()->num_steps += 1;
-		std::cout << "GET RANKING TIME: " << et << " seconds" << std::endl;
+		// double et = timer->GetElapsedTime();
+		// gs->GetSelfHistory()->time_sum += et;
+		// gs->GetSelfHistory()->num_steps += 1;
+		// std::cout << "GET RANKING TIME: " << et << " seconds" << std::endl;
 
 		if (ranking > -1) {
 
@@ -295,10 +295,10 @@ std::string PotOddsStrategy::GetAction(GameState *gs) {
 
 			int raise_to = raise_by + gs->GetSelfHistory()->GetNumChipsThisStreet();
 
-			std::cout << "WIN RATE: " << ranking << std::endl;
-			std::cout << "LAST RAISE BY AMOUNT: " << gs->GetVillainHistory()->GetLastRaiseByAmount() << std::endl;
-			std::cout << "POT SIZE: " << gs->GetPotSize() << std::endl;
-			std::cout << "MY HAND: [" << gs->GetSelfHistory()->GetCard1()->ToString() << "," << gs->GetSelfHistory()->GetCard2()->ToString() << "]" << std::endl << std::endl;
+			// std::cout << "WIN RATE: " << ranking << std::endl;
+			// std::cout << "LAST RAISE BY AMOUNT: " << gs->GetVillainHistory()->GetLastRaiseByAmount() << std::endl;
+			// std::cout << "POT SIZE: " << gs->GetPotSize() << std::endl;
+			// std::cout << "MY HAND: [" << gs->GetSelfHistory()->GetCard1()->ToString() << "," << gs->GetSelfHistory()->GetCard2()->ToString() << "]" << std::endl << std::endl;
 
 			int max_bet = 0;
 			bool can_bet = false;

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "player.hpp"
 
-#define DEBUG 1
+#define DEBUG 0
 
 Player::Player() {
 }
@@ -18,7 +18,7 @@ void Player::run(tcp::iostream &stream) {
   std::string line;
   while (std::getline(stream, line)) {
     // For now, just print out whatever date is read in.
-    std::cout << line << "\n";
+    // std::cout << line << "\n";
 
     // Parse the packet, update the game state, and perform an action if needed
     Packet *packet = parser->Parse(line);

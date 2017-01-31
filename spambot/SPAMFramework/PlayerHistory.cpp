@@ -95,7 +95,7 @@ void PlayerHistory::ResetForNewStreet(int new_street) {
 	SetLastRaiseToAmount(0);
 	SetLastRaiseByAmount(0);
 	SetLastStreet(new_street);
-	std::cout << "///// NEW STREET /////" << std::endl;
+	// std::cout << "///// NEW STREET /////" << std::endl;
 }
 
 int PlayerHistory::GetNumChipsThisStreet() {
@@ -223,8 +223,8 @@ void PlayerHistory::UpdateBetAmounts() {
 		}
 	}
 
-	std::cout << "[" << GetName() << "] -> BET AMOUNTS AFTER UPDATE:" << std::endl
-				<< "NUM CHIPS THIS STREET: " << GetNumChipsThisStreet() << std::endl
-				<< "LAST RAISE TO AMOUNT:" << GetLastRaiseToAmount() << std::endl
-				<< "LAST RAISE BY AMOUNT:" << GetLastRaiseByAmount() << std::endl << std::endl;
+	// std::cout << "[" << GetName() << "] -> BET AMOUNTS AFTER UPDATE:" << std::endl
+	// 			<< "NUM CHIPS THIS STREET: " << GetNumChipsThisStreet() << std::endl
+	// 			<< "LAST RAISE TO AMOUNT:" << GetLastRaiseToAmount() << std::endl
+	// 			<< "LAST RAISE BY AMOUNT:" << GetLastRaiseByAmount() << std::endl << std::endl;
 }

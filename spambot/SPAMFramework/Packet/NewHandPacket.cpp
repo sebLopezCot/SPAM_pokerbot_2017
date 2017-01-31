@@ -14,7 +14,7 @@ NewHandPacket::NewHandPacket(int hand_id, bool is_dealer, Card *card1,
 }
 
 void NewHandPacket::UpdateGameState(GameState *gs) {
-	std::cout << "NEW HAND: " << m_hand_id << std::endl;
+	// std::cout << "NEW HAND: " << m_hand_id << std::endl;
 	gs->SetCurrentHandID(m_hand_id);
 	gs->GetSelfHistory()->SetDealer(m_is_dealer);
 	gs->GetVillainHistory()->SetDealer(!m_is_dealer);
