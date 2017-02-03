@@ -13,6 +13,7 @@ preflop
 
 # output files
 to_server
+*.txt
 
 .metadata
 bin/

@@ -53,15 +53,10 @@ int PotOddsStrategy::PreflopStrategy(double winRate, int amount, int pot){
 		}
 	}
 	else if(0.55<=winRate && winRate<=0.7){
-		if(SPAMHelper::rand() <= 0.25){
-			return amount;
-		}
-		else{
-			return Raise(amount, (int)(winRate-0.5)*10*pot);
-		}
+		return Raise(amount, (int)(winRate-0.5)*10*(pot-amount));
 	}
 	else if(0.7< winRate){
-		return Raise(amount, (int)(2*pot));
+		return Raise(amount, (int)(2*(pot-amount)));
 	}
 
 	return -1;
@@ -77,27 +72,32 @@ int PotOddsStrategy::FlopStrategy(double winRate, int amount, int pot){
 		}
 	}
 	else if(0.6<=winRate && winRate<=0.7){
-		if(amount > 3*pot){
+		if(amount > 2*(pot-amount)){
 			return 0;
 		}
 		else{
-			return Raise(amount, (int)(winRate-0.5)*5*pot);
+			return Raise(amount, (int)(winRate-0.5)*5*(pot-amount));
 		}
 	}
 
 	else if(0.7< winRate && winRate<= 0.8){
-		if(amount >4*pot){
+		if(amount >2.5*(pot-amount)){
 			return 0;
 		}
 		else{
-			return Raise(amount, (int)((1+(winRate-0.7)*12)*pot));
+			return Raise(amount, (int)((1+(winRate-0.7)*6)*(pot-amount)));
 		}
 	}
 	else if(0.8< winRate && winRate<= 0.9){
-		return Raise(amount, (int)((2.2+(winRate-0.8)*10)*pot));
+		if(amount > 3*(pot-amount)){
+			return 0;
+		}
+		else{
+			return Raise(amount, (int)((1.6+(winRate-0.8)*10)*(pot-amount)));
+		}
 	}
 	else if(0.9< winRate){
-		return Raise(amount, (int)((3.5*pot)));
+		return Raise(amount, (int)((2.6*(pot-amount))));
 	}
 
 	return -1;
@@ -113,27 +113,32 @@ int PotOddsStrategy::TurnStrategy(double winRate, int amount, int pot) {
 		}
 	}
 	else if(0.62<=winRate && winRate<=0.75){
-		if(amount > pot*3){
+		if(amount > (pot-amount)*2){
 			return 0;
 		}
 		else{
-			return Raise(amount, (int)(((winRate-0.65)*10)*pot));
+			return Raise(amount, (int)(((winRate-0.65)*7)*(pot-amount)));
 		}
 	}
 
 	else if(0.75< winRate&&winRate<= 0.8){
-		if(amount > pot*5){
+		if(amount > (pot-amount)*2.5){
 			return 0;
 		}
 		else{
-			return Raise(amount, (int)((1+(winRate-0.7)*10)*pot));
+			return Raise(amount, (int)((0.7+(winRate-0.7)*7)*(pot-amount)));
 		}
 	}
 	else if(0.8< winRate&&winRate<= 0.9){
-		return Raise(amount, (int)((2+(winRate-0.8)*5)*pot));
+		if(amount > (pot-amount)*3){
+			return 0;
+		}
+		else{
+			return Raise(amount, (int)((1.4+(winRate-0.8)*5)*(pot-amount)));
+		}
 	}
 	else if(0.9< winRate){
-		return Raise(amount, (int)((3*pot)));
+		return Raise(amount, (int)((2*(pot-amount))));
 	}
 
 	return -1;
@@ -149,7 +154,7 @@ int PotOddsStrategy::RiverStrategy(double winRate, int amount, int pot) {
 		}
 	}
 	else if(0.65<=winRate&&winRate<=0.7){
-		if(amount < 2*pot){
+		if(amount < 2*(pot-amount)){
 			return amount;
 		}
 		else{
@@ -158,23 +163,23 @@ int PotOddsStrategy::RiverStrategy(double winRate, int amount, int pot) {
 	}
 
 	else if(0.7< winRate&&winRate<= 0.8){
-		if(amount > 3*pot){
+		if(amount > 2.5*(pot-amount)){
 			return 0;
 		}
 		else{
-			return Raise(amount, (int)((0.2+(winRate-0.7)*10)*pot));
+			return Raise(amount, (int)(((winRate-0.7)*8)*(pot-amount)));
 		}
 	}
 	else if(0.8< winRate&&winRate<= 0.9){
-		if(amount >4*pot){
+		if(amount >3*(pot-amount)){
 			return 0;
 		}
 		else{
-			return Raise(amount, (int)((1.2+(winRate-0.8)*10)*pot));
+			return Raise(amount, (int)((0.8+(winRate-0.8)*10)*(pot-amount)));
 		}
 	}
 	else if(0.9< winRate){
-		return Raise(amount, (int)((4*pot)));
+		return Raise(amount, (int)((2.2*(pot-amount))));
 	}
 
 	return -1;
@@ -345,4 +350,3 @@ std::string PotOddsStrategy::GetAction(GameState *gs) {
 
 	return "CHECK";
 }
-
