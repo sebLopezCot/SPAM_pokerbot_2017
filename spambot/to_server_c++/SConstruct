@@ -1,0 +1,25 @@
+import os
+import fnmatch
+# # import zipfile
+
+# # unzip ranking tables
+# # zip_ref = zipfile.ZipFile('ranking_tables.zip', 'r')
+# # zip_ref.extractall('.')
+# # zip_ref.close()
+
+
+matches = []
+for root, dirnames, filenames in os.walk('.'):
+    for filename in fnmatch.filter(filenames, '*.cpp'):
+        matches.append(os.path.join(root, filename))
+
+# #print matches
+
+# # On Windows, the path is incorrect, so change the path to
+# # the environment one. Even though windows is the problem,
+# # do it for all platforms
+newpath=os.environ.get('PATH')
+env = Environment(ENV = { 'PATH' : newpath, 'CPPPATH' : 'SPAMFramework' })
+
+boost_libs = ['boost_system', 'boost_program_options']
+env.Program('player', matches, LIBS=[boost_libs, 'pthread'])

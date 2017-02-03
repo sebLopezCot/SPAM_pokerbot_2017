@@ -4,6 +4,12 @@ sqlite.db
 
 # ranking tables
 ranking_tables/*
+flop_rankings
+turn_rankings
+river_rankings
+flop_before_discard_decision_rule
+turn_before_discard_decision_rule
+preflop
 
 # output files
 to_server
