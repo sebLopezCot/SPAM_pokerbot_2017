@@ -1,5 +1,6 @@
 import os
 import fnmatch
+from subprocess import call
 # # import zipfile
 
 # # unzip ranking tables
@@ -8,12 +9,12 @@ import fnmatch
 # # zip_ref.close()
 
 
-matches = []
-for root, dirnames, filenames in os.walk('.'):
+matches = ['main.cpp', 'player.cpp']
+for root, dirnames, filenames in os.walk('SPAMFramework'):
     for filename in fnmatch.filter(filenames, '*.cpp'):
         matches.append(os.path.join(root, filename))
 
-# #print matches
+#print matches
 
 # # On Windows, the path is incorrect, so change the path to
 # # the environment one. Even though windows is the problem,
@@ -22,4 +23,11 @@ newpath=os.environ.get('PATH')
 env = Environment(ENV = { 'PATH' : newpath, 'CPPPATH' : 'SPAMFramework' })
 
 boost_libs = ['boost_system', 'boost_program_options']
-env.Program('player', matches, LIBS=[boost_libs, 'pthread'])
+compile = env.Program('player', matches, LIBS=[boost_libs, 'pthread'])
+
+apply_permissions = env.Command("chmod 777 pokerbot* player", None, "chmod 777 pokerbot* player")
+
+#env.AlwaysBuild(apply_permissions)
+env.Depends(apply_permissions, compile)
+env.Default(apply_permissions)
+
