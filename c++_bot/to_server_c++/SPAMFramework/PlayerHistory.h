@@ -80,7 +80,11 @@ public:
 
 	void SetLastStreet(int last_street);
 
-	void UpdateBetAmounts();
+	void UpdateBetAmounts(bool is_preflop);
+
+	void IncrementActionsThisStreet();
+
+	int GetNumActionsThisStreet();
 
 	double time_sum;
 	int num_steps;
@@ -100,6 +104,7 @@ private:
 	PlayerHistory *m_enemy;
 	Card *m_card1, *m_card2;		// the two cards the player has
 	int num_wins;
+	int m_actions_this_street;
 };
 
 #endif

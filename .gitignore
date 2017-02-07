@@ -12,7 +12,7 @@ turn_before_discard_decision_rule
 preflop
 
 # output files
-to_server
+#to_server
 *.txt
 
 .metadata

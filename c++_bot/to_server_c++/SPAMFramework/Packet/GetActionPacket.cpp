@@ -49,8 +49,24 @@ void GetActionPacket::UpdateGameState(GameState *gs) {
 
 	// Thought that this should go before street change logic so that
 	// these updates can be reset to 0 for each street
-	gs->GetSelfHistory()->UpdateBetAmounts();
-	gs->GetVillainHistory()->UpdateBetAmounts();
+	gs->GetSelfHistory()->UpdateBetAmounts((gs->GetCurrentStreet() == GameState::PREFLOP));
+	gs->GetVillainHistory()->UpdateBetAmounts((gs->GetCurrentStreet() == GameState::PREFLOP));
+
+	// Adjust for preflop (only on the first action of the preflop for us)
+	if (gs->GetCurrentStreet() == GameState::PREFLOP && gs->GetSelfHistory()->GetNumActionsThisStreet() == 0) {
+		if (gs->GetSelfHistory()->IsDealer()) {
+			// Also the small blind
+			gs->GetSelfHistory()->SetLastRaiseToAmount(gs->GetSmallBlindAmount());
+			gs->GetSelfHistory()->SetLastRaiseByAmount(gs->GetSmallBlindAmount() - gs->GetBigBlindAmount());
+			gs->GetVillainHistory()->SetLastRaiseToAmount(gs->GetBigBlindAmount());
+			gs->GetVillainHistory()->SetLastRaiseByAmount(gs->GetBigBlindAmount() - gs->GetSmallBlindAmount());
+			
+		} else {
+			// Also the big blind
+			gs->GetSelfHistory()->SetLastRaiseToAmount(gs->GetBigBlindAmount());
+			gs->GetVillainHistory()->SetLastRaiseToAmount(gs->GetBigBlindAmount());
+		}
+	}
 
 	gs->SetLegalActions(m_legal_actions);
 	

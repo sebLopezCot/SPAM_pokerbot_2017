@@ -4,6 +4,7 @@ PlayerHistory::PlayerHistory(){
 	time_sum = 0;
 	num_steps = 0;
 	num_wins = 0;
+	m_actions_this_street = 0;
 }
 
 void PlayerHistory::LookForWins() {
@@ -95,6 +96,7 @@ void PlayerHistory::ResetForNewStreet(int new_street) {
 	SetLastRaiseToAmount(0);
 	SetLastRaiseByAmount(0);
 	SetLastStreet(new_street);
+	m_actions_this_street = 0;
 	// std::cout << "///// NEW STREET /////" << std::endl;
 }
 
@@ -158,7 +160,15 @@ void PlayerHistory::SetLastStreet(int last_street) {
 	m_last_street = last_street;
 }
 
-void PlayerHistory::UpdateBetAmounts() {
+void PlayerHistory::IncrementActionsThisStreet() {
+	m_actions_this_street++;
+}
+
+int PlayerHistory::GetNumActionsThisStreet() {
+	return m_actions_this_street;
+}
+
+void PlayerHistory::UpdateBetAmounts(bool is_preflop) {
 
 	// At some point, it would be nice to have a dedicated action parser, but for now
 	// we'll parse the last actions in here and figure out how that has affected the
@@ -214,7 +224,7 @@ void PlayerHistory::UpdateBetAmounts() {
 				int raise_to;
 				std::istringstream(parts[1]) >> raise_to;
 
-				int raise_by = raise_to - GetEnemy()->GetLastRaiseToAmount();
+				int raise_by = raise_to - GetLastRaiseToAmount();
 
 				SetNumChipsThisStreet(raise_to);
 				SetLastRaiseToAmount(raise_to);
@@ -223,8 +233,8 @@ void PlayerHistory::UpdateBetAmounts() {
 		}
 	}
 
-	// std::cout << "[" << GetName() << "] -> BET AMOUNTS AFTER UPDATE:" << std::endl
-	// 			<< "NUM CHIPS THIS STREET: " << GetNumChipsThisStreet() << std::endl
-	// 			<< "LAST RAISE TO AMOUNT:" << GetLastRaiseToAmount() << std::endl
-	// 			<< "LAST RAISE BY AMOUNT:" << GetLastRaiseByAmount() << std::endl << std::endl;
+	 // std::cout << "[" << GetName() << "] -> BET AMOUNTS AFTER UPDATE:" << std::endl
+	 // 			<< "NUM CHIPS THIS STREET: " << GetNumChipsThisStreet() << std::endl
+	 // 			<< "LAST RAISE TO AMOUNT:" << GetLastRaiseToAmount() << std::endl
+	 // 			<< "LAST RAISE BY AMOUNT:" << GetLastRaiseByAmount() << std::endl << std::endl;
 }

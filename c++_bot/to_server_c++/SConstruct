@@ -1,0 +1,33 @@
+import os
+import fnmatch
+from subprocess import call
+# # import zipfile
+
+# # unzip ranking tables
+# # zip_ref = zipfile.ZipFile('ranking_tables.zip', 'r')
+# # zip_ref.extractall('.')
+# # zip_ref.close()
+
+
+matches = ['main.cpp', 'player.cpp']
+for root, dirnames, filenames in os.walk('SPAMFramework'):
+    for filename in fnmatch.filter(filenames, '*.cpp'):
+        matches.append(os.path.join(root, filename))
+
+#print matches
+
+# # On Windows, the path is incorrect, so change the path to
+# # the environment one. Even though windows is the problem,
+# # do it for all platforms
+newpath=os.environ.get('PATH')
+env = Environment(ENV = { 'PATH' : newpath, 'CPPPATH' : 'SPAMFramework' })
+
+boost_libs = ['boost_system', 'boost_program_options']
+compile = env.Program('player', matches, LIBS=[boost_libs, 'pthread'])
+
+apply_permissions = env.Command("chmod 777 pokerbot* player", None, "chmod 777 pokerbot* player")
+
+#env.AlwaysBuild(apply_permissions)
+env.Depends(apply_permissions, compile)
+env.Default(apply_permissions)
+

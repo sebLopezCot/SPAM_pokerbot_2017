@@ -15,7 +15,7 @@
 #include "../Card.h"
 #include "../GameState.h"
 #include "../Util/SPAMHelper.h"
-#include "../Util/Timer.h"
+// #include "../Util/Timer.h"
 #include "../RankingTables/DiscardDecisionRuleGivenFlop.h"
 #include "../RankingTables/DiscardDecisionRuleGivenTurn.h"
 #include "../RankingTables/HandRankerGivenFlop.h"
@@ -47,7 +47,7 @@ private:
 	HandRankerGivenTurn *turnRanking;
 	HandRankerGivenRiver *riverRanking;
 
-	Timer *timer;
+	// Timer *timer;
 };
 
 #endif /* SPAMFRAMEWORK_STRATEGY_POTODDSSTRATEGY_H_ */

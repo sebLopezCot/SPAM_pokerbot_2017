@@ -29,6 +29,7 @@ void Player::run(tcp::iostream &stream) {
       || packet->GetType() == "REQUEST_KEY_VALUES_PACKET") {
 
       std::string action = strategy->GetAction(gs);
+      gs->GetSelfHistory()->IncrementActionsThisStreet();
 
       if (DEBUG) {
         std::cout << "MY ACTION: " << action << std::endl;

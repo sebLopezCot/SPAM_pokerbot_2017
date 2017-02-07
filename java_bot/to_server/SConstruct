@@ -1,0 +1,6 @@
+import zipfile
+zip_ref = zipfile.ZipFile('ranking_tables.zip', 'r')
+zip_ref.extractall('.')
+zip_ref.close()
+
+

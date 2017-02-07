@@ -44,20 +44,32 @@ int PotOddsStrategy::Raise(int amount, int possibleRaise){
 }
 
 int PotOddsStrategy::PreflopStrategy(double winRate, int amount, int pot){
-	if(winRate<0.55){
+	if(winRate<0.45){
 		if(winRate >= (amount*1.4)/(amount+pot)){
+			// std::cout << "PREFLOP STRAT -> WIN RATE:" << winRate << ", AMOUNT: " << amount << std::endl << std::endl;
 			return amount;
 		}
 		else{
 			return 0;
 		}
 	}
-	else if(0.55<=winRate && winRate<=0.7){
-		return Raise(amount, (int)(winRate-0.5)*10*(pot-amount));
+	else if(0.45<=winRate && winRate<=0.57){
+		if(amount > (pot-amount)*2.5){
+			return 0;
+		}
+		else{
+			return Raise(amount, (int)((winRate-0.45)*10*(pot-amount)));
+		}
 	}
-	else if(0.7< winRate){
-		return Raise(amount, (int)(2*(pot-amount)));
+	else if(0.57<winRate){
+		if(amount > (pot-amount)*3.5){
+			return 0;
+		}
+		else{
+			return Raise(amount, (int)((winRate-0.45)*10*(pot-amount)));
+		}
 	}
+	
 
 	return -1;
 }
@@ -76,25 +88,20 @@ int PotOddsStrategy::FlopStrategy(double winRate, int amount, int pot){
 			return 0;
 		}
 		else{
-			return Raise(amount, (int)(winRate-0.5)*5*(pot-amount));
+			return Raise(amount, (int)((winRate-0.5)*5*(pot-amount)));
 		}
 	}
 
-	else if(0.7< winRate && winRate<= 0.8){
-		if(amount >2.5*(pot-amount)){
+	else if(0.7< winRate && winRate<= 0.78){
+		if(amount >3.5*(pot-amount)){
 			return 0;
 		}
 		else{
 			return Raise(amount, (int)((1+(winRate-0.7)*6)*(pot-amount)));
 		}
 	}
-	else if(0.8< winRate && winRate<= 0.9){
-		if(amount > 3*(pot-amount)){
-			return 0;
-		}
-		else{
-			return Raise(amount, (int)((1.6+(winRate-0.8)*10)*(pot-amount)));
-		}
+	else if(0.78< winRate && winRate<= 0.9){
+		return Raise(amount, (int)((1.6+(winRate-0.8)*10)*(pot-amount)));
 	}
 	else if(0.9< winRate){
 		return Raise(amount, (int)((2.6*(pot-amount))));
@@ -107,7 +114,7 @@ int PotOddsStrategy::TurnStrategy(double winRate, int amount, int pot) {
 	if(winRate<0.62){
 		if(winRate>= 1.5*(amount*1.0)/(amount+pot)){
 			return amount;
-		}
+			}
 		else{
 			return 0;
 		}
@@ -117,28 +124,23 @@ int PotOddsStrategy::TurnStrategy(double winRate, int amount, int pot) {
 			return 0;
 		}
 		else{
-			return Raise(amount, (int)(((winRate-0.65)*7)*(pot-amount)));
+			return Raise(amount, (int)((((winRate-0.65)*7)*(pot-amount))));
 		}
 	}
 
-	else if(0.75< winRate&&winRate<= 0.8){
-		if(amount > (pot-amount)*2.5){
+	else if(0.75< winRate&&winRate<= 0.85){
+		if(amount > (pot-amount)*3.5){
 			return 0;
 		}
 		else{
 			return Raise(amount, (int)((0.7+(winRate-0.7)*7)*(pot-amount)));
 		}
 	}
-	else if(0.8< winRate&&winRate<= 0.9){
-		if(amount > (pot-amount)*3){
-			return 0;
-		}
-		else{
-			return Raise(amount, (int)((1.4+(winRate-0.8)*5)*(pot-amount)));
-		}
+	else if(0.85< winRate&&winRate<= 0.9){
+		return Raise(amount, (int)((1.4+(winRate-0.8)*10)*(pot-amount)));
 	}
 	else if(0.9< winRate){
-		return Raise(amount, (int)((2*(pot-amount))));
+		return Raise(amount, (int)((2.4*(pot-amount))));
 	}
 
 	return -1;
@@ -154,7 +156,7 @@ int PotOddsStrategy::RiverStrategy(double winRate, int amount, int pot) {
 		}
 	}
 	else if(0.65<=winRate&&winRate<=0.7){
-		if(amount < 2*(pot-amount)){
+		if(amount < 2*(pot-amount)) {
 			return amount;
 		}
 		else{
@@ -167,19 +169,19 @@ int PotOddsStrategy::RiverStrategy(double winRate, int amount, int pot) {
 			return 0;
 		}
 		else{
-			return Raise(amount, (int)(((winRate-0.7)*8)*(pot-amount)));
+			return Raise(amount, (int)(((winRate-0.7)*10)*(pot-amount)));
 		}
 	}
 	else if(0.8< winRate&&winRate<= 0.9){
-		if(amount >3*(pot-amount)){
+		if(amount >3.5*(pot-amount)){
 			return 0;
 		}
 		else{
-			return Raise(amount, (int)((0.8+(winRate-0.8)*10)*(pot-amount)));
+			return Raise(amount, (int)((1.0+(winRate-0.8)*10)*(pot-amount)));
 		}
 	}
 	else if(0.9< winRate){
-		return Raise(amount, (int)((2.2*(pot-amount))));
+		return Raise(amount, (int)((2.5*(pot-amount))));
 	}
 
 	return -1;
@@ -188,11 +190,11 @@ int PotOddsStrategy::RiverStrategy(double winRate, int amount, int pot) {
 std::string PotOddsStrategy::GetAction(GameState *gs) {
 
 	if (gs->GetCurrentStreet() == GameState::GAMEOVER) {
-		// std::cout << "AVG TIME PER FILE: " << gs->GetSelfHistory()->time_sum / (double) gs->GetSelfHistory()->num_steps << std::endl;
-		// std::cout << "POT ODDS BANK ROLL: " << gs->GetSelfHistory()->GetBankRoll() << std::endl;
-		// std::cout << "VILLAIN BANK ROLL: " << gs->GetVillainHistory()->GetBankRoll() << std::endl;
-		// std::cout << "POT ODDS WINS: " << gs->GetSelfHistory()->GetNumWins() << std::endl;
-		// std::cout << "VILLAIN WINS: " << gs->GetVillainHistory()->GetNumWins() << std::endl;
+		 // std::cout << "AVG TIME PER FILE: " << gs->GetSelfHistory()->time_sum / (double) gs->GetSelfHistory()->num_steps << std::endl;
+		 // std::cout << "POT ODDS BANK ROLL: " << gs->GetSelfHistory()->GetBankRoll() << std::endl;
+		 // std::cout << "VILLAIN BANK ROLL: " << gs->GetVillainHistory()->GetBankRoll() << std::endl;
+		 // std::cout << "POT ODDS WINS: " << gs->GetSelfHistory()->GetNumWins() << std::endl;
+		 // std::cout << "VILLAIN WINS: " << gs->GetVillainHistory()->GetNumWins() << std::endl;
 		return "FINISH";
 	}
 
@@ -283,27 +285,18 @@ std::string PotOddsStrategy::GetAction(GameState *gs) {
 
 		if (ranking > -1) {
 
-			// Adjust for preflop bug
-			if (gs->GetCurrentStreet() == GameState::PREFLOP) {
-				if (gs->GetSelfHistory()->IsDealer()) {
-					gs->GetVillainHistory()->SetLastRaiseToAmount(gs->GetBigBlindAmount());
-					gs->GetVillainHistory()->SetLastRaiseByAmount(gs->GetBigBlindAmount() - gs->GetSmallBlindAmount());
-				} else {
-					gs->GetVillainHistory()->SetLastRaiseToAmount(gs->GetSmallBlindAmount());
-					gs->GetVillainHistory()->SetLastRaiseByAmount(-1.0 * (gs->GetBigBlindAmount() - gs->GetSmallBlindAmount()));
-				}
-			}
-
 			// Pass to Pedro's strategy
+			// std::cout << "THE POT SIZE INTO PEDRO: " << gs->GetPotSize() << std::endl;
+			// std::cout << "THE AMOUNT INTO PEDRO: " << gs->GetVillainHistory()->GetLastRaiseByAmount() << std::endl;
 			int raise_by = GeneralStrategy(gs->GetCurrentStreet(),
 					ranking, gs->GetVillainHistory()->GetLastRaiseByAmount(), gs->GetPotSize());
 
-			int raise_to = raise_by + gs->GetSelfHistory()->GetNumChipsThisStreet();
+			int raise_to = raise_by + gs->GetSelfHistory()->GetLastRaiseToAmount();
 
-			// std::cout << "WIN RATE: " << ranking << std::endl;
-			// std::cout << "LAST RAISE BY AMOUNT: " << gs->GetVillainHistory()->GetLastRaiseByAmount() << std::endl;
-			// std::cout << "POT SIZE: " << gs->GetPotSize() << std::endl;
-			// std::cout << "MY HAND: [" << gs->GetSelfHistory()->GetCard1()->ToString() << "," << gs->GetSelfHistory()->GetCard2()->ToString() << "]" << std::endl << std::endl;
+			 // std::cout << "WIN RATE: " << ranking << std::endl;
+			 // std::cout << "LAST RAISE BY AMOUNT: " << gs->GetVillainHistory()->GetLastRaiseByAmount() << std::endl;
+			 // std::cout << "POT SIZE: " << gs->GetPotSize() << std::endl;
+			 // std::cout << "MY HAND: [" << gs->GetSelfHistory()->GetCard1()->ToString() << "," << gs->GetSelfHistory()->GetCard2()->ToString() << "]" << std::endl << std::endl;
 
 			int max_bet = 0;
 			bool can_bet = false;
@@ -331,7 +324,9 @@ std::string PotOddsStrategy::GetAction(GameState *gs) {
 				raise_to = max_bet;
 			}
 
-			if (can_bet) {
+			// std::cout << "------> WE WERE TOLD TO RAISE TO -> " << raise_to << "SINCE THEY RAISED TO " << gs->GetVillainHistory()->GetLastRaiseToAmount() << std::endl;
+
+			// if (can_bet) {
 				if (raise_to == gs->GetVillainHistory()->GetLastRaiseToAmount() && raise_to != 0) {
 					return "CALL";
 				} else if (gs->GetVillainHistory()->GetLastRaiseToAmount() == 0) {
@@ -339,9 +334,9 @@ std::string PotOddsStrategy::GetAction(GameState *gs) {
 				} else if (gs->GetVillainHistory()->GetLastRaiseToAmount() != 0) {
 					return "RAISE:" + SPAMHelper::to_string(raise_to);
 				}
-			} else {
-				return (should_call_and_not_check) ? "CALL" : "CHECK";
-			}
+			// } else {
+			// 	return (should_call_and_not_check) ? "CALL" : "CHECK";
+			// }
 
 		} else {
 			return "CHECK";
