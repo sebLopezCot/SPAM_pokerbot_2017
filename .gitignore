@@ -13,7 +13,8 @@ preflop
 
 # output files
 #to_server
-*.txt
+java_bot/**/*.txt
+c++_bot/**/*.txt
 
 .metadata
 bin/
