@@ -26,8 +26,8 @@ void HandOverPacket::UpdateGameState(GameState *gs) {
 	gs->GetSelfHistory()->LookForWins();
 	gs->GetVillainHistory()->LookForWins();
 
-	gs->GetSelfHistory()->UpdateBetAmounts();
-	gs->GetVillainHistory()->UpdateBetAmounts();
+	gs->GetSelfHistory()->UpdateBetAmounts((gs->GetCurrentStreet() == GameState::PREFLOP));
+	gs->GetVillainHistory()->UpdateBetAmounts((gs->GetCurrentStreet() == GameState::PREFLOP));
 
 	gs->SetTimeLeft(m_time_bank);
 }
